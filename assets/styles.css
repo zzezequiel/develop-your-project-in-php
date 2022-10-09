@@ -1,0 +1,55 @@
+@import url('http://fonts.cdnfonts.com/css/anurati');
+@import url('https://fonts.googleapis.com/css2?family=League+Spartan:wght@300;600&display=swap');
+
+:root {
+    --dark: #151C35;
+    --blue: #497FE5;
+    --gray: #8A8CA7;
+    --white: #bbbee2;
+}
+
+* {
+    font-family: 'League Spartan', sans-serif;
+}
+
+body {
+    /* background: rgb(73, 127, 229);
+    background: linear-gradient(90deg, rgba(73, 127, 229, 1) 0%, rgba(21, 28, 53, 1) 60%); */
+    background-color: var(--dark);
+    color: var(--white);
+}
+
+.logo {
+    max-width: 20%;
+    height: auto;
+}
+
+.bg-dark-x {
+    background-color: #1f294e;
+}
+
+.form-control,
+.btn {
+    min-height: 3.125rem;
+    line-height: initial;
+}
+
+.font-family-primary {
+    font-family: 'Anurati', sans-serif;
+}
+
+.img-1 {
+    background-image: url('img/imagen8.webp');
+    background-size: cover;
+    background-position: center;
+}
+.img-2 {
+    background-image: url('img/imagen3.png');
+    background-size: cover;
+    background-position: center;
+}
+.img-3 {
+    background-image: url('img/imagen10.jpeg');
+    background-size: cover;
+    background-position: center;
+}
