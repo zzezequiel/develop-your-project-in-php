@@ -87,7 +87,7 @@
                             Sign into ANUNNAKI
                         </h2>
 
-                        <form action="index.php?controller=Login&action" method="post" id="formLogin" class="mb-5">
+                        <form action="?controller=Login&action=validate" method="post" id="formLogin" class="mb-5">
                             <div class="mb-4">
                                 <label for="exampleInputEmail1" class="form-label font-weight">Email</label>
                                 <input type="email" name="email" id="emailLogin" class="form-control bg-dark-x border-0"

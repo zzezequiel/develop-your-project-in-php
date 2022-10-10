@@ -11,8 +11,3 @@ require_once "core/classes/Controller.php";
 require_once "core/Router.php";
 
 $router = new Router();
-/*$prueba = new LoginModel;
-print_r ($prueba->get());
-echo '<pre>';
-var_dump ($prueba);
-echo '</pre>';*/
