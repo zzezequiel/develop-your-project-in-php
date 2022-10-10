@@ -87,17 +87,17 @@
                             Sign into ANUNNAKI
                         </h2>
 
-                        <form action="" method="post" id="formLogin" class="mb-5">
+                        <form action="?controller=Login&action=validate" method="post" id="formLogin" class="mb-5">
                             <div class="mb-4">
                                 <label for="exampleInputEmail1" class="form-label font-weight">Email</label>
-                                <input type="email" id="emailLogin" class="form-control bg-dark-x border-0"
+                                <input type="email" name="email" id="emailLogin" class="form-control bg-dark-x border-0"
                                     placeholder="Email address" aria-describedby="emailHelp"
                                     onkeyup="validateEmail()" />
                                 <span id="advertEmail"></span>
                             </div>
                             <div class="mb-4">
                                 <label for="exampleInputPassword1" class="form-label">Password</label>
-                                <input type="password" id="passLogin" class="form-control bg-dark-x border-0 mb-2"
+                                <input type="password" name="password" id="passLogin" class="form-control bg-dark-x border-0 mb-2"
                                     placeholder="Password" id="exampleInputPassword1" onkeyup="validatePass()" />
                                 <!-- <span id="advertPass"></span> -->
                                 <a href="#" class="form-text text-muted text-decoration-none">Click here if you have

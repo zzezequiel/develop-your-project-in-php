@@ -5,19 +5,15 @@ class LoginModel extends Model
     
     function get()
     {
-
-
-
-
-
-         $query = $this->db->connect()->prepare("SELECT * FROM products;");
+        $query = $this->db->connect()->prepare("SELECT * FROM `user-login`
+        ;");
 
         try {
             $query->execute();
-           $users = $query->fetchAll();
-             return $users;
-         } catch (PDOException $e) {
-             return [];
+            $employees = $query->fetchAll();
+            return $employees;
+        } catch (PDOException $e) {
+            return [];
         }
     }
 }

@@ -8,9 +8,6 @@ require_once "models/LoginModel.php";
 require_once "core/classes/View.php";
 require_once "core/classes/Controller.php";
 
+require_once "core/Router.php";
 
-$prueba = new LoginModel;
-print_r ($prueba->get());
-echo '<pre>';
-var_dump ($prueba);
-echo '</pre>';
+$router = new Router();
