@@ -1,5 +1,4 @@
 <?php
-// require_once ""
 
 class LoginController 
 {
@@ -8,6 +7,7 @@ class LoginController
     // VALIDATE
     public $email;
     public $password;
+    public $id;
 
 function __construct()
 {
@@ -35,18 +35,20 @@ function __construct()
         
         $loginModel =  new LoginModel;
 
-        $userLogin = $loginModel ->get();             //usuario y password
+        $userLogin = $loginModel ->get();            
 
         
         if ($userLogin[0]["email"] == $this -> email && $userLogin[0]["password"] == $this -> password )
         {
             
-            echo "HOLA ESTOY DENTRO";
-        // header('location:./views\clientView\clientDashboard.php');
+        session_start();
+        $_SESSION['userSession'] = $userLogin[0]['id'];
+        
+        header('location:./views\clientView\clientDashboard.php');
 
     }else{
-        echo "ERROR";
-        // header("../views/loginView/login.php");
+    
+         header("../views/loginView/login.php");
     } 
 }
 }
