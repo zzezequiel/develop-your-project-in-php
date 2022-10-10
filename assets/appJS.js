@@ -10,4 +10,4 @@ const
 setInterval(function () {
     btnNext.click();
     console.log("Continue Clicked");
-}, 5000); 
+}, 10000); 
