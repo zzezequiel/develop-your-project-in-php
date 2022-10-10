@@ -8,3 +8,13 @@
 // Urilizar una sesion para guardar los datos del usuario logueado
 // Si algo falla enviar una sesion con el fallo
 // Rediriguir a x.php
+
+class LoginController 
+{
+    use Controller;
+
+    // VALIDATE
+    function validate(){
+        
+    }
+}

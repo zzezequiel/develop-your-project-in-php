@@ -18,7 +18,7 @@
     <!-- CSS -->
     <link rel="stylesheet" href="assets/styles.css" />
 
-    <title>Anurati</title>
+    <title>Anunnaki</title>
 </head>
 
 <body>
@@ -84,7 +84,7 @@
                 <section class="px-lg-5 py-lg-4 p-4 w-100 align-self-center">
                     <div id="loginSection" class="">
                         <h2 class="font-weight-bold mb-4 font-family-primary">
-                            Sign into ANURATI
+                            Sign into ANUNNAKI
                         </h2>
 
                         <form action="" method="post" id="formLogin" class="mb-5">

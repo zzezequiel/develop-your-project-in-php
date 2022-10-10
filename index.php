@@ -1,12 +1,16 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-</head>
-<body>
-    <h1>Final project PHP</h1>
-</body>
-</html>
+<?php
+
+require_once "config/constants.php";
+require_once "config/db.php";
+require_once "core/classes/Database.php";
+require_once "core/classes/Model.php";
+require_once "models/LoginModel.php";
+require_once "core/classes/View.php";
+require_once "core/classes/Controller.php";
+
+
+$prueba = new LoginModel;
+print_r ($prueba->get());
+echo '<pre>';
+var_dump ($prueba);
+echo '</pre>';
