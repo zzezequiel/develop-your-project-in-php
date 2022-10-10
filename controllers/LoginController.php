@@ -11,10 +11,23 @@
 
 class LoginController 
 {
-    use Controller;
+    //use Controller;
 
     // VALIDATE
-    function validate(){
+   public $email;
+   public $password;
+
+function __construct($email, $password){
+    $this -> email = $email;
+    $this -> password = $password;
+}
+
+    function validate(){ 
+        header('location:../views\clientView\clientDashboard.php');
         
     }
+
 }
+/*
+$user = new LoginController($_POST['email'], $_POST['password']);;
+$user -> validate();*/
