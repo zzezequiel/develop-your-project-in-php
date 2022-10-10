@@ -34,24 +34,27 @@ function __construct()
     function validate(){ 
         
         $loginModel =  new LoginModel;
-
-        $userLogin = $loginModel ->get();            
-
         
-        if ($userLogin[0]["email"] == $this -> email && $userLogin[0]["password"] == $this -> password )
-        {
+        print_r($loginModel->validate($this->email,$this->password));
+ 
+        $userLogin= $loginModel ->validate($this->email,$this->password);
+      
+        if($userLogin)  //che
+     //  if ($userLogin["email"] == $this -> email && $userLogin["password"] == $this -> password )
+       {
             
-        session_start();
-        $_SESSION['userSession'] = $userLogin[0]['id'];
-        
-        header('location:./views\clientView\clientDashboard.php');
+            session_start();
+            $_SESSION['userSession'] = $this->email;
+      
+            header('location:./views\clientView\clientDashboard.php');  ///call class views instead
 
-    }else{
-    
-         header("../views/loginView/login.php");
+   }else{
+    //echo "error password";
+      header("location:./views/loginView/login.php");
     } 
 }
 }
+
 
 
 
