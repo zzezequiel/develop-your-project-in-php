@@ -25,10 +25,9 @@ class LoginModel extends Model
         try {
             $query->execute();
             $user=$query->fetch();
-            if($user!=null){
-                return true;
-            }
-            return false;
+            
+                return $user;
+        
            //  return $user;  //array
             
           

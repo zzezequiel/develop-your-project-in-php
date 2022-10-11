@@ -35,25 +35,29 @@ function __construct()
         
         $loginModel =  new LoginModel;
         
-        print_r($loginModel->validate($this->email,$this->password));
  
         $userLogin= $loginModel ->validate($this->email,$this->password);
       
-        if($userLogin)  //che
-     //  if ($userLogin["email"] == $this -> email && $userLogin["password"] == $this -> password )
-       {
+        if($userLogin) {
+            if($userLogin['roll']==="admin"){
+                //admin dashboard
+                session_start();
+                $_SESSION['userSession'] = $this->email;
             
-            session_start();
-            $_SESSION['userSession'] = $this->email;
-      
-            header('location:./views\clientView\clientDashboard.php');  ///call class views instead
-
-   }else{
-    //echo "error password";
-      header("location:./views/loginView/login.php");
-    } 
-}
-}
+                Header("Location: index.php?controller=Admin&action=getAllProducts");  ///call class views instead
+            }else {
+                //client dashboard
+                 session_start();
+                $_SESSION['userSession'] = $this->email;
+            
+             Header("Location: index.php?controller=Client&action=getAllProducts");
+            }
+        }else{
+            
+            header("location:?validate=error");
+            } 
+        }
+    }
 
 
 
