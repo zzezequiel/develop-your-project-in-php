@@ -31,27 +31,31 @@ function __construct()
 
     }
     
-    function validate(){ 
-        
-        $loginModel =  new LoginModel;
-        
-        print_r($loginModel->validate($this->email,$this->password));
- 
-        $userLogin= $loginModel ->validate($this->email,$this->password);
-      
-        if($userLogin)  //che
-     //  if ($userLogin["email"] == $this -> email && $userLogin["password"] == $this -> password )
-       {
-            
-            session_start();
-            $_SESSION['userSession'] = $this->email;
-      
-            header('location:./views\clientView\clientDashboard.php');  ///call class views instead
+function validate(){ 
+    
+    $loginModel =  new LoginModel;
+    
+    print_r($loginModel->validate($this->email,$this->password));
 
-   }else{
-    //echo "error password";
-      header("location:./views/loginView/login.php");
-    } 
+    $userLogin= $loginModel ->validate($this->email,$this->password);
+    
+    if($userLogin)  //che
+    //  if ($userLogin["email"] == $this -> email && $userLogin["password"] == $this -> password )
+    {
+        
+        session_start();
+        $_SESSION['userSession'] = $this->email;
+    
+        // header('location:./views\clientView\clientDashboard.php');  
+        
+        ///call class views instead
+        $this->view->render("clientView/clientDashboard");
+
+
+}else{
+//echo "error password";
+    header("location:./index.php");
+} 
 }
 }
 
