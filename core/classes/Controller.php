@@ -38,6 +38,6 @@ trait Controller
 
     function error($errorMsg)
     {
-       require_once VIEWS . "/error/error.php";
+       require_once VIEWS . "/errorView/error.php";
      }
 }

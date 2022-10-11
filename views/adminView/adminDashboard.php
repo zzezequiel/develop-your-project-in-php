@@ -57,6 +57,7 @@
                             </li>
                         </ul>
                     </div>
+                    
                 </div>
             </nav>
         </header>
@@ -89,8 +90,8 @@
                                     preserveAspectRatio='xMidYMid slice' focusable='false' src=" . $products['img'] . ">
                                     </div>
                                     <div class='col-md-5'>
-                                        <button>Edit</button>
-                                        <button>Delete</button>
+                                    <a class='btn btn-secondary' href='?controller=Admin&action=getProduct&id=" . $products['idproduct'] . "'>Edit</a>
+                                    <a class='btn btn-danger' href='?controller=Employee&action=deleteProduct&id=" . $products['idproduct'] . "'>Delete</a>
                                     </div>
                                 </div>";
 
