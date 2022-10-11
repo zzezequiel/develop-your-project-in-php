@@ -2,38 +2,62 @@
 
 class LoginController 
 {
-     use Controller;
+    // use Controller;
 
     // VALIDATE
     public $email;
     public $password;
-   // public $id;
+    public $id;
 
-    function validate(){ 
-        $this -> email = $_POST["email"];
+function __construct()
+{
+    $this -> email = $_POST["email"];
     $this -> password = $_POST["password"];
-        
-     //   $loginModel =  new LoginModel;
-        
-       // print_r($loginModel->validate($this->email,$this->password));
- 
-        $userLogin= $this->loginModel ->validate($this->email,$this->password);
-      
-        if($userLogin) 
-       {
-            session_start();
-            $_SESSION['userSession'] = $this->email;
-           // echo $_SESSION['userSession'];
-        //   $this->view->render("clientView/clientDashboard");
 
-          // location index cotroller =client action getAll();
-   
-       }else{
-        //echo "error password"; 
-         header("Location:index.php");
-        } 
-      }
-}
+    $this->view = new View();
+    // $this->model = $this->loadModel(substr(__CLASS__,0,-10));
+
+        $action = "";
+
+        if (isset($_GET["action"])) {
+            $action = $_REQUEST["action"];
+        }
+
+        if (method_exists(__CLASS__, $action)) {
+            call_user_func([__CLASS__, $action], $_REQUEST);
+        } else {
+            $this->error("Invalid user action");
+        }
+
+    }
+    
+    function validate(){ 
+        
+        $loginModel =  new LoginModel;
+        
+ 
+        $userLogin= $loginModel ->validate($this->email,$this->password);
+      
+        if($userLogin) {
+            if($userLogin['roll']==="admin"){
+                //admin dashboard
+                session_start();
+                $_SESSION['userSession'] = $this->email;
+            
+                Header("Location: index.php?controller=Admin&action=getAllProducts");  ///call class views instead
+            }else {
+                //client dashboard
+                 session_start();
+                $_SESSION['userSession'] = $this->email;
+            
+             Header("Location: index.php?controller=Client&action=getAllProducts");
+            }
+        }else{
+            
+            header("location:?validate=error");
+            } 
+        }
+    }
 
 
 
