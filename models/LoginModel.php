@@ -29,9 +29,6 @@ class LoginModel extends Model
                 return true;
             }
             return false;
-           //  return $user;  //array
-            
-          
             
         } catch (PDOException $e) {
             return [];

@@ -2,57 +2,37 @@
 
 class LoginController 
 {
-    // use Controller;
+     use Controller;
 
     // VALIDATE
     public $email;
     public $password;
-    public $id;
+   // public $id;
 
-function __construct()
-{
-    $this -> email = $_POST["email"];
-    $this -> password = $_POST["password"];
-
-    $this->view = new View();
-    // $this->model = $this->loadModel(substr(__CLASS__,0,-10));
-
-        $action = "";
-
-        if (isset($_GET["action"])) {
-            $action = $_REQUEST["action"];
-        }
-
-        if (method_exists(__CLASS__, $action)) {
-            call_user_func([__CLASS__, $action], $_REQUEST);
-        } else {
-            $this->error("Invalid user action");
-        }
-
-    }
-    
     function validate(){ 
+        $this -> email = $_POST["email"];
+    $this -> password = $_POST["password"];
         
-        $loginModel =  new LoginModel;
+     //   $loginModel =  new LoginModel;
         
-        print_r($loginModel->validate($this->email,$this->password));
+       // print_r($loginModel->validate($this->email,$this->password));
  
-        $userLogin= $loginModel ->validate($this->email,$this->password);
+        $userLogin= $this->loginModel ->validate($this->email,$this->password);
       
-        if($userLogin)  //che
-     //  if ($userLogin["email"] == $this -> email && $userLogin["password"] == $this -> password )
+        if($userLogin) 
        {
-            
             session_start();
             $_SESSION['userSession'] = $this->email;
-      
-            header('location:./views\clientView\clientDashboard.php');  ///call class views instead
+           // echo $_SESSION['userSession'];
+        //   $this->view->render("clientView/clientDashboard");
 
-   }else{
-    //echo "error password";
-      header("location:./views/loginView/login.php");
-    } 
-}
+          // location index cotroller =client action getAll();
+   
+       }else{
+        //echo "error password"; 
+         header("Location:index.php");
+        } 
+      }
 }
 
 
