@@ -133,42 +133,7 @@
                     <p class="lead">Some great placeholder content for the first featurette here. Imagine some
                         exciting prose here.</p>
 
-<!--                         //PRODUCT DASHBOARD
- -->               
-                    <table class="table">
-                        <thead>
-                            <tr>
-                                <th class="tg-0pky">Id Product</th>
-                                <th class="tg-0pky">Title</th>
-                                <th class="tg-0lax">Location</th>
-                                <th class="tg-0lax">Description</th>
-                                <th class="tg-0lax">Pre Build</th>
-                                <th class="tg-0lax">Size</th>
-                                <th class="tg-0lax">Price</th>
-                                <th class="tg-0lax">Actions</th>
-                            </tr>
-                        </thead>
-                        <tbody>
-                             <?php
-                             foreach ($this -> data as $index => $products) {
-                                echo "<tr>";
-                                echo "<td class='tg-0lax'>" . $products["id-product"] . "</td>";
-                                echo "<td class='tg-0lax'>" . $products["title"] . "</td>";
-                                echo "<td class='tg-0lax'>" . $products["location"] . "</td>";
-                                echo "<td class='tg-0lax'>" . $products["description"] . "</td>";
-                                echo "<td class='tg-0lax'>" . $products["pre-builtd"] . "</td>";
-                                echo "<td class='tg-0lax'>" . $products["size"] . "</td>";
-                                echo "<td class='tg-0lax'>" . $products["price"] . "</td>";
-                                echo "<td colspan='2' class='tg-0lax'>
-                                <a class='btn btn-secondary' href='?controller=Employee&action=getEmployee&id=" . $products["id-product"] . "'>Edit</a>
-                                <a class='btn btn-danger' href='?controller=Employee&action=deleteEmployee&id=" . $products["id-product"] . "'>Delete</a>
-                                </td>";
-                                echo "</tr>";
-                            } 
-                            ?> 
-                        </tbody>
-                    </table>
-
+                        
                 </div>
                 <div class="col-md-5">
                     <svg class="bd-placeholder-img bd-placeholder-img-lg featurette-image img-fluid mx-auto" width="500"
@@ -179,8 +144,38 @@
                             dy=".3em">500x500</text>
                     </svg>
 
+
+
                 </div>
             </div>
+          
+                             <?php
+                             foreach ($this -> data as $index => $products) {
+                        echo "  <hr class='featurette-divider'>
+                                <div class='row featurette m-5'>
+                                    <div class='col-md-7'>
+                                        <h2 class='featurette-heading fw-normal lh-1'>".$products['title']."<span class='text-muted'>". $products['size'] ."</span></h2>
+                                        <p class='lead'>".$products['description']."</p>
+                                        <p class='lead'>Price ".$products['price']."</p>
+                                    </div>
+                                    <div class='col-md-5'>
+                                    
+                                    <svg class='bd-placeholder-img bd-placeholder-img-lg featurette-image img-fluid mx-auto' width='500'
+                                    height='500' xmlns='http://www.w3.org/2000/svg' role='img' aria-label='Placeholder: 500x500'
+                                    preserveAspectRatio='xMidYMid slice' focusable='false'>
+                                    <title>Placeholder</title>
+                                    <rect width='100%' height='100%' fill='#eee'></rect><text x='50%' y='50%' fill='#aaa'
+                                        dy='.3em'>500x500</text>
+                                    </svg>
+                                    
+                                    </div>
+                                </div>";
+
+                                
+                            } 
+                            ?> 
+                        
+
 
             <hr class="featurette-divider">
 
