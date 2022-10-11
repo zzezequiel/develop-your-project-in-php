@@ -5,7 +5,7 @@ class LoginModel extends Model
     
     function getAll()
     {
-        $query = $this->db->connect()->prepare("SELECT * FROM `user-login`
+        $query = $this->db->connect()->prepare("SELECT * FROM `users`
         ;");
 
         try {
@@ -19,7 +19,7 @@ class LoginModel extends Model
     
     function validate($emailPost, $passwordPost)
     {
-        $query = $this->db->connect()->prepare("SELECT * FROM `user-login`e
+        $query = $this->db->connect()->prepare("SELECT * FROM `users` e
          WHERE email ='$emailPost' AND password='$passwordPost';");
 
         try {
