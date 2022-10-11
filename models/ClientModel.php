@@ -3,10 +3,10 @@
     class ClientModel extends Model{
 
         function get(){
-            $query = $this->db->connect()->prepare("SELECT p.`id-product`, p.title, ud.`first-name` as 'proName', ud.`last-name` as 'proLName', p.location, p.description, p.`pre-build`, p.size, p.price, p.img
+            $query = $this->db->connect()->prepare("SELECT p.title, ud.`first-name` as 'name', ud.`last-name` as 'lastName', p.location, p.description, p.`pre-build`, p.size, p.price, p.img
             FROM products p
-            LEFT JOIN usersdata ud ON p.`id-product` = ud.`id-product`
-            ORDER BY p.`id-product`;");
+            LEFT JOIN userdata ud ON p.`id-user` = ud.id
+            ORDER BY p.id;");
 
             try {
                 $query->execute();

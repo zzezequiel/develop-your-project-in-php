@@ -124,7 +124,7 @@
                                 <div class='row featurette m-5'>
                                     <div class='col-md-7'>
                                         <h2 class='featurette-heading fw-normal lh-1'>".$products['title']. " <span class='text-muted'> ". $products['size']. " metres</span></h2>
-                                         <h5 class='featurette-heading fw-normal lh-1'>Property of: <b>".$products['proName']." ".$products['proLName']."</b></h5> 
+                                         <h5 class='featurette-heading fw-normal lh-1'>Property of: <b>".$products['name']." ".$products['lastName']."</b></h5> 
                                         <p class='lead'>".$products['description']."</p>
                                         <p class='lead'>Price ".$products['price']."</p>
                                         <button type='button' class='btn btn-success btn-lg'>Buy</button>
