@@ -2,54 +2,37 @@
 
 class LoginController 
 {
-    // use Controller;
+    use Controller;
 
     // VALIDATE
     public $email;
     public $password;
-    public $id;
-
-function __construct()
-{
-    $this -> email = $_POST["email"];
-    $this -> password = $_POST["password"];
-
-    $this->view = new View();
-    // $this->model = $this->loadModel(substr(__CLASS__,0,-10));
-
-        $action = "";
-
-        if (isset($_GET["action"])) {
-            $action = $_REQUEST["action"];
-        }
-
-        if (method_exists(__CLASS__, $action)) {
-            call_user_func([__CLASS__, $action], $_REQUEST);
-        } else {
-            $this->error("Invalid user action");
-        }
-
-    }
     
     function validate(){ 
         
-        $loginModel =  new LoginModel;
+    $this -> email = $_POST["email"];
+    $this -> password = $_POST["password"];
         
-        print_r($loginModel->validate($this->email,$this->password));
- 
+       $loginModel =  new LoginModel;
+        
         $userLogin= $loginModel ->validate($this->email,$this->password);
       
-        if($userLogin)  //che
-     //  if ($userLogin["email"] == $this -> email && $userLogin["password"] == $this -> password )
-       {
+        if($userLogin) {
+            if($userLogin['roll']==="admin"){
+                //admin dashboard
+                session_start();
+                $_SESSION['userSession'] = $this->email;
             
-            session_start();
-            $_SESSION['userSession'] = $this->email;
+                Header("Location: index.php?controller=Admin&action=getAllProducts");  ///call class views instead
+            }else {
+                //client dashboard
+                 session_start();
+                $_SESSION['userSession'] = $this->email;
             
-             Header("Location: index.php?controller=Client&action=getAllProducts");  ///call class views instead
- 
+             Header("Location: index.php?controller=Client&action=getAllProducts");
+            }
         }else{
-            //echo "error password";
+            
             header("location:?validate=error");
             } 
         }

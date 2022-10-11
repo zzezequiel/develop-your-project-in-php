@@ -3,12 +3,12 @@
 trait Controller
 {
     public $view;
-    // public $model;
+     public $model;
 
     function __construct()
     {
-         $this->view = new View();
-         $this->model = $this->loadModel(substr(__CLASS__,0,-10));
+        $this->view = new View();
+        $this->model = $this->loadModel(substr(__CLASS__,0,-10));
 
         $action = "";
 
@@ -24,20 +24,20 @@ trait Controller
     }
 
      function loadModel($model)
-     {
-         $url = MODELS . '/' . $model . 'Model.php';
+    {
+        $url = MODELS . '/' . $model . 'Model.php';
 
-         if (file_exists($url)) {
-             require_once $url;
+        if (file_exists($url)) {
+            require_once $url;
 
             $modelName = $model . 'Model';
 
-             return new $modelName();
-         }
-     }
+            return new $modelName();
+        }
+    }
 
-     function error($errorMsg)
-     {
-        require_once VIEWS . "/error/error.php";
+    function error($errorMsg)
+    {
+       require_once VIEWS . "/error/error.php";
      }
 }

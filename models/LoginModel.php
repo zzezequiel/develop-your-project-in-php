@@ -19,16 +19,15 @@ class LoginModel extends Model
     
     function validate($emailPost, $passwordPost)
     {
-        $query = $this->db->connect()->prepare("SELECT * FROM `users` e
+        $query = $this->db->connect()->prepare("SELECT * FROM users e
          WHERE email ='$emailPost' AND password='$passwordPost';");
 
         try {
             $query->execute();
             $user=$query->fetch();
-            if($user!=null){
-                return true;
-            }
-            return false;
+            
+                return $user;
+        
            //  return $user;  //array
             
           
