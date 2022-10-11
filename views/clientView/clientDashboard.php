@@ -1,3 +1,12 @@
+
+<?php
+
+/* require_once "controllers/ClientController.php"
+ */
+
+?>
+
+
 <!DOCTYPE html>
 <html lang="en">
 
@@ -123,6 +132,43 @@
                             class="text-muted">It’ll blow your mind.</span></h2>
                     <p class="lead">Some great placeholder content for the first featurette here. Imagine some
                         exciting prose here.</p>
+
+<!--                         //PRODUCT DASHBOARD
+ -->               
+                    <table class="table">
+                        <thead>
+                            <tr>
+                                <th class="tg-0pky">Id Product</th>
+                                <th class="tg-0pky">Title</th>
+                                <th class="tg-0lax">Location</th>
+                                <th class="tg-0lax">Description</th>
+                                <th class="tg-0lax">Pre Build</th>
+                                <th class="tg-0lax">Size</th>
+                                <th class="tg-0lax">Price</th>
+                                <th class="tg-0lax">Actions</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                             <?php
+                             foreach ($this -> data as $index => $products) {
+                                echo "<tr>";
+                                echo "<td class='tg-0lax'>" . $products["id-product"] . "</td>";
+                                echo "<td class='tg-0lax'>" . $products["title"] . "</td>";
+                                echo "<td class='tg-0lax'>" . $products["location"] . "</td>";
+                                echo "<td class='tg-0lax'>" . $products["description"] . "</td>";
+                                echo "<td class='tg-0lax'>" . $products["pre-builtd"] . "</td>";
+                                echo "<td class='tg-0lax'>" . $products["size"] . "</td>";
+                                echo "<td class='tg-0lax'>" . $products["price"] . "</td>";
+                                echo "<td colspan='2' class='tg-0lax'>
+                                <a class='btn btn-secondary' href='?controller=Employee&action=getEmployee&id=" . $products["id-product"] . "'>Edit</a>
+                                <a class='btn btn-danger' href='?controller=Employee&action=deleteEmployee&id=" . $products["id-product"] . "'>Delete</a>
+                                </td>";
+                                echo "</tr>";
+                            } 
+                            ?> 
+                        </tbody>
+                    </table>
+
                 </div>
                 <div class="col-md-5">
                     <svg class="bd-placeholder-img bd-placeholder-img-lg featurette-image img-fluid mx-auto" width="500"

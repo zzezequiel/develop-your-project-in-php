@@ -45,15 +45,15 @@ function __construct()
             
             session_start();
             $_SESSION['userSession'] = $this->email;
-      
-            header('location:./views\clientView\clientDashboard.php');  ///call class views instead
-
-   }else{
-    //echo "error password";
-      header("location:./views/loginView/login.php");
-    } 
-}
-}
+            
+             Header("Location: index.php?controller=Client&action=getAllProducts");  ///call class views instead
+ 
+        }else{
+            //echo "error password";
+            header("location:?validate=error");
+            } 
+        }
+    }
 
 
 
