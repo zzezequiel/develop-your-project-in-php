@@ -7,6 +7,14 @@ class LoginController
     // VALIDATE
     public $email;
     public $password;
+
+    function logOut()
+    {   //session_start();
+        session_unset();
+        session_destroy();
+        echo "logout";
+
+    }
     
     function validate(){ 
         
@@ -23,19 +31,21 @@ class LoginController
                 session_start();
                 $_SESSION['userSession'] = $this->email;
             
-                Header("Location: index.php?controller=Admin&action=getAllProducts");  ///call class views instead
+                header("Location: index.php?controller=Admin&action=getAllProducts");  ///call class views instead
             }else {
                 //client dashboard
                  session_start();
                 $_SESSION['userSession'] = $this->email;
             
-             Header("Location: index.php?controller=Client&action=getAllProducts");
+             header("Location: index.php?controller=Client&action=getAllProducts");
             }
         }else{
             
             header("location:?validate=error");
             } 
         }
+
+       
     }
 
 

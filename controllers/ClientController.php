@@ -3,7 +3,14 @@
     class ClientController{
          use Controller;
 
+
         function getAllProducts(){
+            
+         if(!isset($_SESSION['userSession'])) {
+            header("Location: index.php?");
+         }   // header("Location:?controller=Client&action=getAllProducts");
+           
+         
              $products = $this -> model ->get(); 
    
  
