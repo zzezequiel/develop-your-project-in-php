@@ -1,3 +1,7 @@
+<!-- im sending to admin controller, where a contact to model controller but i have problems with store the new data product, it returns a array as null. I thisnk its the tag name in the form, probably id set wrong the names.  -->
+
+
+
 <!DOCTYPE html>
 <html lang="en">
 
@@ -62,18 +66,12 @@
     </header>
     <main>
         <div class="container">
-            <h1>Employee's page!</h1>
+            <h1>land's page!</h1>
             </br>
 
-            <?php
-            if ($this->action == "getProduct" && (!isset($this->data) || !$this->data || sizeof($this->data) == 0)) {
-                echo "<p>The Land does not exists!</p>";
-            } else if (isset($error)) {
-                echo "<p>$error</p>";
-            }
-            ?>
-            <form class="mb-5 needs-validation" action="index.php?controller=Admin&action=<?php echo isset($this->data['idproduct']) ? "updateProduct" : "createProduct" ?>" method="post">
-                <input type="hidden" name="id" value="<?php echo isset($this->data['idproduct']) ? $this->data['idproduct'] : null ?>">
+             
+            <form class="mb-5 needs-validation" action="index.php?controller=Admin&action=update" method="post">
+                <input type="hidden" name="idproduct" value="<?php echo isset($this->data['idproduct']) ? $this->data['idproduct'] : null ?>">
                 <div class="form-row">
                     <div class="col">
                         <div class="form-group">
@@ -84,8 +82,8 @@
                     </div>
                     <div class="col">
                         <div class="form-group">
-                            <label for="name">Descriotion</label>
-                            <input required type="text" value="<?php echo isset($this->data['description']) ? $this->data['description'] : null ?>" class="form-control" id=description" name="description" aria-describedby="lasdescription" placeholder="Enter description">
+                            <label for="description">Description</label>
+                            <input required type="text" value="<?php echo isset($this->data['description']) ? $this->data['description'] : null ?>" class="form-control" id="description" name="description" aria-describedby="description" placeholder="Enter description">
                         </div>
                     </div>
                 </div>
@@ -93,14 +91,14 @@
                 <div class="form-row">
                     <div class="col">
                         <div class="form-group">
-                            <label for="exampleInputEmail1">Location</label>
+                            <label for="location">Location</label>
                             <input required type="location" value="<?php echo isset($this->data['location']) ? $this->data['location'] : null ?>" class="form-control" id="location" name="location" aria-describedby="location" placeholder="Enter location">
                         </div>
                     </div>
                     <div class="col">
                         <div class="form-group">
                             <label for="prebuild">Content</label>
-                            <select name="prebuild" class="form-control" id="gender" required>
+                            <select name="prebuild" class="form-control" id="prebuild" required>
                                 <option value="">Please Select</option>
                                 <option value="1" <?php echo isset($this->data['prebuild']) && $this->data['prebuild']  == 1 ? 'selected' : null; ?>>Construct</option>
                                 <option value="2" <?php echo isset($this->data['prebuild']) && $this->data['prebuild']  == 2 ? 'selected' : null; ?>>Not constructed</option>

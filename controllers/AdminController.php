@@ -50,13 +50,15 @@
     {
         if (sizeof($_POST) > 0) {
             $product = $this->model->update($_POST);
+            if ($product) {
 
-            if ($product[0]) {
-                Header("Location: index.php?controller=Admin&action=getAllProducts"); 
+                Header("Location: index.php?controller=Admin&action=update"); 
+
             } else {
                 $this->action = $request["action"];
                 $this->error = "The data entered is incorrect, check that there is no other employee with that email.";
                 $this->view->render("adminView/updateProduct");
+
             }
         } else {
             $this->view->render("adminView/adminDashboard");
