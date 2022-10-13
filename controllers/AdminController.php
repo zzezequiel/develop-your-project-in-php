@@ -5,18 +5,34 @@
     class AdminController{
         use Controller;
 
-    function getAllProducts(){
+        function getAllProducts(){
             $products = $this -> model ->get(); 
 
 
-        if(isset($products)){
-            $this->view->data = $products;
-            $this->view->render("adminView/adminDashboard");      
+            if(isset($products)){
+                $this->view->data = $products;
+                $this->view->render("adminView/adminDashboard");      
+            }
+        
+        
         }
-        
-        
-    }
 
+<<<<<<< HEAD
+
+
+        function getProduct($request){
+        $products = null;
+
+            if (isset($request["id"])) {
+            $products = $this->model->getById($request["id"]);
+        }
+
+        $this->view->action = $request["action"];
+        $this->view->data = $products;
+        $this->view->render("products/products");
+
+        }
+=======
     function getProduct($request)
     {
        // $product = null;
@@ -76,4 +92,5 @@
             Header("Location: index.php?controller=Admin&action=getAllProducts"); 
         }
     }
+>>>>>>> e93d4cd7b1dc0067436a22c46cc1ed723d952461
     }

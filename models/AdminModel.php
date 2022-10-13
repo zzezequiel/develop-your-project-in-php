@@ -32,6 +32,20 @@
             }
         }
 
+        function delete($id){
+            $query = $this->db->connect()->prepare("DELETE FROM products WHERE id = ?");
+            $query->bindParam(1, $id);
+
+        try {
+            $query->execute();
+            return [true];
+
+        } catch (PDOException $e) {
+            return [false, $e];
+        }
+    }
+
+
         function update($product)
         {
             $id = $product["id"];
