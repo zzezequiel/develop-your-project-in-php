@@ -21,12 +21,12 @@
         function getById($id){
             $query = $this->db->connect()->prepare("SELECT p.id, p.title, p.location, p.description,  p.pre_build, p.size, p.price, p.img 
             FROM products p
-            WHERE id-products = $idProduct;");
+            WHERE id = $id;");
         
             try {
                 $query->execute();
-                $idProduct = $query->fetch();
-                return $idProduct;
+                $id = $query->fetch();
+                return $id;
             } catch (PDOException $e) {
                 return [];
             }
