@@ -28,9 +28,7 @@
                         </li>
                     </ul>
                 </div>
-                <div>
-                    <a id="home" class="btn btn-success btn-lg" href="?controller=Admin&action=create">Create</a>
-                    </div>
+                    <p> User: <?php echo $_SESSION['userSession']?> </p>
             </div>
         </nav>
     </header>
