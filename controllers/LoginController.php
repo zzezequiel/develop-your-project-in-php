@@ -7,6 +7,11 @@ class LoginController
     // VALIDATE
     public $email;
     public $password;
+   
+    
+
+
+    
 
     function logOut()
     {   //session_start();
@@ -17,6 +22,8 @@ class LoginController
     }
     
     function validate(){ 
+
+        
         
     $this -> email = $_POST["email"];
     $this -> password = $_POST["password"];
@@ -30,15 +37,18 @@ class LoginController
                 //admin dashboard
                 session_start();
                 $_SESSION['userSession'] = $this->email;
+                $_SESSION['adminSession'] = $this->email;
             
                 header("Location: index.php?controller=Admin&action=getAllProducts");  ///call class views instead
             }else {
                 //client dashboard
                  session_start();
-                $_SESSION['userSession'] = $this->email;
+                 $_SESSION['userSession'] = $this->email;
+                $_SESSION['clientSession'] = $this->email;
             
              header("Location: index.php?controller=Client&action=getAllProducts");
             }
+            
         }else{
             
             header("location:?validate=error");

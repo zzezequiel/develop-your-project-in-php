@@ -54,8 +54,12 @@
                                     <li><a class="dropdown-item scroll-nav" href="?controller=Login&action=logOut">Log out</a></li>
                                 </ul>
                             </li>
+
                         </ul>
                     </div>
+                    <li class="nav-item">
+                     <a class="nav-link disabled no-access"><h4>Welcome <?php echo $_SESSION["userSession"]?></h3></a>
+                     </li>
                 </div>
             </nav>
         </header>

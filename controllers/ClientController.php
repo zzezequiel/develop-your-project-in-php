@@ -6,7 +6,7 @@
 
         function getAllProducts(){
             
-         if(!isset($_SESSION['userSession'])) {
+         if(!isset($_SESSION['clientSession'])) {
             header("Location: index.php?");
          }   // header("Location:?controller=Client&action=getAllProducts");
            
