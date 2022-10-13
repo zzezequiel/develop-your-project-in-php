@@ -56,9 +56,10 @@
             $pre_build = $product["pre_build"];
             $size =  $product["size"];
             $price = $product["price"];
+            $img = $product["img"];
 
             $query = $this->db->connect()->prepare(" UPDATE products
-            SET title = '$title', description = '$description', location = '$location', pre_build = '$pre_build', size = '$size', price = '$price'
+            SET title = '$title', description = '$description', location = '$location', pre_build = '$pre_build', size = '$size', price = '$price', img = '$img'
             WHERE id = '$id' ;");
     
             

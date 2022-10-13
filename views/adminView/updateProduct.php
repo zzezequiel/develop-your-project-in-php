@@ -125,7 +125,7 @@
                                 </div>
                             </div>
                             <div class="d-flex justify-content-between mt-4">
-                                <a id="return" class="btn btn-secondary" href="<?php echo "?controller=Admin&action=getAllProducts&action=getAllProducts"; ?>">Return</a>
+                                <a id="return" class="btn btn-secondary" href="<?php echo "?controller=Admin&action=getAllProducts"; ?>">Return</a>
                                 <button type="submit" class="btn btn-primary">Submit</button>
                             </div>
                         </div>
@@ -136,7 +136,7 @@
                             <div class="form-group">
                                 
                                 <img src=" <?php echo $this->data['img']?>">
-                                <input required type="file" class="mt-4"  id="img" name="img" aria-describedby="img" aria-describedby="img" placeholder="Enter img">
+                                <input type="file" class="mt-4"  id="img" name="img" aria-describedby="img" aria-describedby="img" placeholder="Enter img">
                             </div>
                         </div>
                     </div>
