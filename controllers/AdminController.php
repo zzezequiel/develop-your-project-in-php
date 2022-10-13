@@ -37,8 +37,7 @@
             $products = $this->model->create($_POST);
 
             if ($products[0]) {
-                Header("Location: index.php?controller=Admin&action=getAllProducts");  ///call class views instead
-
+                header("Location: index.php?controller=Admin&action=getAllProducts");
             } else {
                 echo $products[1];
             }
@@ -47,7 +46,6 @@
             $this->view->render("adminView/addProduct");
         }
     }
-
 
 
     function update($request)

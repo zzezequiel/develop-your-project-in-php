@@ -1,95 +1,118 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Add New Product</title>
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css">
 
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <!-- Bootstrap -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-Zenh87qX5JnK2Jl0vWa8Ck2rdkQ2Bzep5IDxbcnCeuOxjzrPF/et3URy9Bv1WTRi" crossorigin="anonymous" />
+
+    <!-- FontAwesome -->
+    <script src="https://kit.fontawesome.com/137c893bad.js" crossorigin="anonymous"></script>
+
+    <!-- JS -->
+    <script src="assets/appJS.js" defer></script>
+
+    <!-- CSS -->
+    <link rel="stylesheet" href="assets/styles.css" />
+
+    <title>Anunnaki new product</title>
 </head>
+
 <body>
     <div class="container">
-        <h1>New Product</h1>
-        <br>
+        <h1>Employee's page!</h1>
+        </br>
 
         <?php
-         if ($this->action == "getProduct" && (!isset($this->data) || !$this->data || sizeof($this->data) == 0)) {
-            echo "<p>The product does not exists!</p>";
+        if ($this->action == "getProduct" && (!isset($this->data) || !$this->data || sizeof($this->data) == 0)) {
+            echo "<p>The Products does not exists!</p>";
         } else if (isset($error)) {
             echo "<p>$error</p>";
         }
         ?>
 
-
-        <form class="mb-5 needs-validation" action="index.php?controller=Admin&action=<?php echo isset($this->data['id']) ? "update" : "create" ?>" method="post">
-
-            <input type="hidden" name="id" value="<?php echo isset($this->data['id']) ? $this->data['id'] : null ?>">
+        <form class="mb-5 needs-validation" action="index.php?controller=Admin&action=create" method="POST">
             <div class="form-row">
+                <div class="col">
+                    <div class="form-group">
+                    
+                            <option value="<?php echo isset($this->data['id_user']); ?>"> Property of : Admin</option>
+                        </select>
+                    </div>
+                    <br>
+
+                </div>
                 <div class="col">
                     <div class="form-group">
                         <label for="title">Title</label>
-                        <input required type="text" value="<?php echo isset($this->data['title']) ? $this->data['title'] : null ?>" class="form-control" id="title" name="title" aria-describedby="title" placeholder="Enter title">
+                        <input required type="name" value="<?php echo isset($this->data['title']) ? $this->data['title'] : null ?>" class="form-control" id="title" name="title" aria-describedby="titleHelp" placeholder="Enter title">
+                        <small id="titleHelp" class="form-text text-muted">We'll never share your email with anyone else.</small>
+                        <br>
                     </div>
                 </div>
+            </div>
 
+
+            <div class="form-row">
                 <div class="col">
                     <div class="form-group">
                         <label for="size">Size</label>
-                        <input required type="number" value="<?php echo isset($this->data['size']) ? $this->data['size'] : null ?>" class="form-control" id="size" name="size" aria-describedby="size" placeholder="Enter size land">
+                        <input required type="number" value="<?php echo isset($this->data['size']) ? $this->data['size'] : null ?>" class="form-control" id="size" name="size" aria-describedby="sizeHelp" placeholder="Enter Size">
+                        <br>
+                    </div>
+                </div>
+                <div class="col">
+                    <div class="form-group">
+                        <label for="pre_build">Prebuild</label>
+                        <select name="pre_build" class="form-control" id="pre_build" required>
+                            <option value="">Please Select</option>
+                            <option value="1" <?php echo isset($this->data['pre_build']) && $this->data['pre_build']  == 1 ? 'selected' : null; ?>>Constructed</option>
+                            <option value="2" <?php echo isset($this->data['pre_build']) && $this->data['pre_build']  == 2 ? 'selected' : null; ?>>Structure</option>
+                        </select>
+                        <br>
                     </div>
                 </div>
             </div>
 
-<!-- //generar select -->
             <div class="form-row">
-
-
                 <div class="col">
                     <div class="form-group">
-                    <label for="property">Location</label>
-                        <input type="text" value="<?php echo isset($this->data['location']) ? $this->data['location'] : null ?>" class="form-control" id="location" name="location" aria-describedby="location" placeholder="Enter location">
+                        <label for="location">Location</label>
+                        <input type="name" value="<?php echo isset($this->data['location']) ? $this->data['location'] : null ?>" class="form-control" id="location" name="location" aria-describedby="locationHelp" placeholder="Enter location">
+                    </div>
+                    <br>
+                </div>
+                <div class="col">
+                    <div class="form-group">
+                        <label for="Price">Price</label>
+                        <input type="number" value="<?php echo isset($this->data['price']) ? $this->data['price'] : null ?>" class="form-control" id="price" name="price" aria-describedby="priceHelp" placeholder="Enter price">
+                        <br>
                     </div>
                 </div>
             </div>
 
-
             <div class="form-row">
                 <div class="col">
-                    <div class="form-group">
-                        <label for="pre_build">Pre build</label>
-                        <input type="text" value="<?php echo isset($this->data['pre_build']) ? $this->data['pre_build'] : null ?>" class="form-control" id="pre_build" name="pre_build" aria-describedby="pre_build" placeholder="Insert if the land is built">
-                    </div>
-                </div>
-
-                <div class="col">
-                    <div class="form-group">
-                        <label for="exampleprice">Price</label>
-                        <input type="textarea" value="<?php echo isset($this->data['price']) ? $this->data['price'] : null ?>" class="form-control" id="price" name="price" aria-describedby="price" placeholder="Enter price">
-                    </div>
-                </div>
-            </div>
-
-
-            <div class="form-row">
-            <div class="col">
                     <div class="form-group">
                         <label for="description">Description</label>
-                        <textarea required type="textarea" value="<?php echo isset($this->data['description']) ? $this->data['description'] : null ?>" class="form-control" id="description" name="description" aria-describedby="location" placeholder="Enter description"> Enter description here></textarea>
+                        <textarea value="<?php echo isset($this->data['description']) ? $this->data['description'] : null ?>" class="form-control" id="description" name="description" cols="20" rows="20" aria-describedby="descriptionHelp" placeholder="Enter description"></textarea><br>
                     </div>
                 </div>
-
                 <div class="col">
                     <div class="form-group">
-                        <label for="location">Upload Image</label>
-                            <input type="file" id="img" name="img" value="<?php echo isset($this->data['img']) ? $this->data['img'] : null ?>">
-                            <input type="submit">
+                        <label for="age">Upload Image</label>
+                        <input type="file" value="<?php echo isset($this->data['img']) ? $this->data['img'] : null ?>" class="form-control" id="img" name="img" aria-describedby="imgHelp" placeholder="Enter img"><br>
                     </div>
-                </div> 
+                </div>
             </div>
+
             <button type="submit" class="btn btn-primary">Submit</button>
-            <a id="return" class="btn btn-secondary" href="<?php echo "?controller=Admin&action=getAllProducts&action=getAllProducts"; ?>">Return</a>
+            <a id="return" class="btn btn-secondary" href="<?php echo "?controller=Admin&action=getAllProducts&action=getAllProducts"; ?>">Return</a><br>
         </form>
     </div>
 </body>
+
 </html>

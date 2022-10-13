@@ -2,11 +2,13 @@
 
     class AdminModel extends Model{
 
+
         function get(){
             $query = $this->db->connect()->prepare("SELECT p.title, ud.first_name as 'name', ud.last_name as 'lastName', p.location, p.description, p.pre_build, p.size, p.price, p.img
             FROM products p
             LEFT JOIN userdata ud ON p.id_user = ud.id
             ORDER BY p.id;");
+
 
             try {
                 $query->execute();
@@ -17,15 +19,15 @@
             }
         }
     
-        function getById($idProduct){
-            $query = $this->db->connect()->prepare("SELECT p.idproduct, p.title, p.location, p.description, p.prebuild, p.size, p.price 
+        function getById($id){
+            $query = $this->db->connect()->prepare("SELECT p.id, p.title, p.location, p.description,  p.pre_build, p.size, p.price 
             FROM products p
-            WHERE idproduct = $idProduct;");
+            WHERE id = $id;");
         
             try {
                 $query->execute();
-                $idProduct = $query->fetch();
-                return $idProduct;
+                $id = $query->fetch();
+                return $id;
             } catch (PDOException $e) {
                 return [];
             }
@@ -35,26 +37,26 @@
             $query = $this->db->connect()->prepare("DELETE FROM products WHERE id = ?");
             $query->bindParam(1, $id);
 
-        try {
-            $query->execute();
-            return [true];
+            try {
+                $query->execute();
+                return [true];
 
-        } catch (PDOException $e) {
-            return [false, $e];
+            } catch (PDOException $e) {
+                return [false, $e];
+            }
         }
-    }
 
 
-        function update($product)
-        {
+        function update($product){
             $query = $this->db->connect()->prepare("UPDATE products
             SET title = ?, description = ?, location = ?, prebuild = ?, size = ?, price = ?
             WHERE idproduct = ?;");
+
     
             $query->bindParam(1, $product["title"]);
             $query->bindParam(2, $product["description"]);
             $query->bindParam(3, $product["location"]);
-            $query->bindParam(4, $product["prebuild"]);
+            $query->bindParam(4, $product["pre_build"]);
             $query->bindParam(5, $product["size"]);
             $query->bindParam(6, $product["price"]);
             
@@ -66,13 +68,22 @@
                 return [false, $e];
             }
         }
+   
 
 
-        function create($products){
+        function create($products)
+        {
+            
+            echo 
+            $products["title"].",".$products["description"].",".$products["location"].",".$products["pre_build"].",".$products["size"].",".$products["price"].",".$products["img"];
+       
+
+            echo "<br>";
             $query = $this->db->connect()->prepare("INSERT INTO products (id_user, title, description, location, pre_build, size, price, img)
             VALUES
             (?, ?, ?, ?, ?, ?, ?, ?);");
-
+        
+    
             $query->bindParam(1, $products["id_user"]);
             $query->bindParam(2, $products["title"]);
             $query->bindParam(3, $products["description"]);
@@ -81,14 +92,12 @@
             $query->bindParam(6, $products["size"]);
             $query->bindParam(7, $products["price"]);
             $query->bindParam(8, $products["img"]);
-
+    
             try {
                 $query->execute();
                 return [true];
-
             } catch (PDOException $e) {
                 return [false, $e];
             }
         }
     }
-    

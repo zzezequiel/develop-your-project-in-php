@@ -55,7 +55,7 @@
                         </ul>
                     </div>
                     <div>
-                    <a id="home" class="btn btn-outline-success btn-sm font-family-primary" href="?controller=Admin&action=create">+  New Product</a>
+                    <a id="home" class="btn btn-primary" href="?controller=Admin&action=create">Create</a>
                     </div>
                     
                 </div>
