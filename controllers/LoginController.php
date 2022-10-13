@@ -8,11 +8,6 @@ class LoginController
     public $email;
     public $password;
    
-    
-
-
-    
-
     function logOut()
     {   //session_start();
         session_unset();
