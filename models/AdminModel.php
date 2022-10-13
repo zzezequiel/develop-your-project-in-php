@@ -1,5 +1,5 @@
 <?php
-
+//comm
     class AdminModel extends Model{
 
         function get(){
