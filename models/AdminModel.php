@@ -32,7 +32,6 @@
             }
         }
 
-<<<<<<< HEAD
         function delete($id){
             $query = $this->db->connect()->prepare("DELETE FROM products WHERE id = ?");
             $query->bindParam(1, $id);
@@ -47,7 +46,6 @@
     }
 
 
-=======
         function update($product)
         {
             $query = $this->db->connect()->prepare("UPDATE products
@@ -69,6 +67,5 @@
                 return [false, $e];
             }
         }
->>>>>>> e93d4cd7b1dc0067436a22c46cc1ed723d952461
     }
     
