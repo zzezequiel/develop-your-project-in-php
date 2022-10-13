@@ -90,8 +90,8 @@
                                     preserveAspectRatio='xMidYMid slice' focusable='false' src=" . $products['img'] . ">
                                     </div>
                                     <div class='col-md-5'>
-                                    <a class='btn btn-secondary' href='?controller=Admin&action=getProduct&id=" . $products['idproduct'] . "'>Edit</a>
-                                    <a class='btn btn-danger' href='?controller=Employee&action=deleteProduct&id=" . $products['idproduct'] . "'>Delete</a>
+                                    <a class='btn btn-secondary' href='?controller=Admin&action=getProduct&id=" . $products['id'] . "'>Edit</a>
+                                    <a class='btn btn-danger' href='?controller=Employee&action=deleteProduct&id=" . $products['id'] . "'>Delete</a>
                                     </div>
                                 </div>";
 
