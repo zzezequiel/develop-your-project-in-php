@@ -19,7 +19,7 @@
         }
     
         function getById($id){
-            $query = $this->db->connect()->prepare("SELECT p.id, p.title, p.location, p.description,  p.pre_build, p.size, p.price 
+            $query = $this->db->connect()->prepare("SELECT p.id, p.title, p.location, p.description,  p.pre_build, p.size, p.price, p.img 
             FROM products p
             WHERE id = $id;");
         

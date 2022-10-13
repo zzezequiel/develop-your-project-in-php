@@ -65,67 +65,84 @@
         </header>
     </header>
     <main>
-        <div class="container">
+        <div class="container-xl mt-5">
             <h1>land's page!</h1>
             </br>
 
              
             <form class="mb-5 needs-validation" action="index.php?controller=Admin&action=update" method="POST">
                 <input type="hidden" name="id" value="<?php echo $this->data['id'] ?>">
-                <div class="form-row">
-                    <div class="col">
-                        <div class="form-group">
-                            <label for="name">Title</label>
-                            <input required type="text" value="<?php echo $this->data['title']?>" class="form-control" id="title" name="title" aria-describedby="title" placeholder="Enter title">
+                <div class="d-flex flex-row justify-content-between">
+                    <div class=" row">
+                        <div class="flex-column">
+                            <div class="col">
+                                <div class="form-group">
+                                    <label for="name">Title</label>
+                                    <input required type="text" value="<?php echo $this->data['title']?>" class="form-control" id="title" name="title" aria-describedby="title" placeholder="Enter title">
+                                </div>
+
+                            </div>
+                            <div class="col">
+                                <div class="form-group">
+                                    <label for="description">Description</label>
+                                    <input required type="text" value="<?php echo $this->data['description']?>" class="form-control" id="description" name="description" aria-describedby="description" placeholder="Enter description">
+                                </div>
+                            </div>
                         </div>
 
-                    </div>
-                    <div class="col">
-                        <div class="form-group">
-                            <label for="description">Description</label>
-                            <input required type="text" value="<?php echo $this->data['description']?>" class="form-control" id="description" name="description" aria-describedby="description" placeholder="Enter description">
+                        <div class="form-row">
+                            <div class="col">
+                                <div class="form-group">
+                                    <label for="location">Location</label>
+                                    <input required type="location" value="<?php echo $this->data['location']?>" class="form-control" id="location" name="location" aria-describedby="location" placeholder="Enter location">
+                                </div>
+                            </div>
+                            <div class="col">
+                                <div class="form-group">
+                                    <label for="pre_build">Content</label>
+                                    <select name="pre_build" class="form-control" id="pre_build" required>
+                                        <option value="">Please Select</option>
+                                        <option value="1" <?php echo $this->data['pre_build'] == 1  ?>>Construct</option>
+                                        <option value="2" <?php echo $this->data['pre_build'] == 2  ?>>Not constructed</option>
+                                    </select>
+                                </div>
+                            </div>
                         </div>
-                    </div>
-                </div>
 
-                <div class="form-row">
-                    <div class="col">
-                        <div class="form-group">
-                            <label for="location">Location</label>
-                            <input required type="location" value="<?php echo $this->data['location']?>" class="form-control" id="location" name="location" aria-describedby="location" placeholder="Enter location">
-                        </div>
-                    </div>
-                    <div class="col">
-                        <div class="form-group">
-                            <label for="pre_build">Content</label>
-                            <select name="pre_build" class="form-control" id="pre_build" required>
-                                <option value="">Please Select</option>
-                                <option value="1" <?php echo $this->data['pre_build'] == 1  ?>>Construct</option>
-                                <option value="2" <?php echo $this->data['pre_build'] == 2  ?>>Not constructed</option>
-                            </select>
-                        </div>
-                    </div>
-                </div>
+                        
 
+                        <div class="form-row">
+                            <div class="col">
+                                <div class="form-group">
+                                    <label for="size">Size</label>
+                                    <input type="text" value="<?php echo $this->data['size'] ?>" class="form-control" id="size" name="size" aria-describedby="size" placeholder="Enter size">
+                                </div>
+                            </div>
+                            <div class="col">
+                                <div class="form-group">
+                                    <label for="price">Price</label>
+                                    <input type="text" value="<?php echo $this->data['price']?>" class="form-control" id="price" name="price" aria-describedby="price" placeholder="Enter price">
+                                </div>
+                            </div>
+                            <div class="d-flex justify-content-between mt-4">
+                                <a id="return" class="btn btn-secondary" href="<?php echo "?controller=Admin&action=getAllProducts&action=getAllProducts"; ?>">Return</a>
+                                <button type="submit" class="btn btn-primary">Submit</button>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="row mt-4">
+                        <div class="col ms-5">
+                            <div class="form-group">
+                                
+                                <img src=" <?php echo $this->data['img']?>">
+                                <input required type="file" class="mt-4"  id="img" name="img" aria-describedby="img" aria-describedby="img" placeholder="Enter img">
+                            </div>
+                        </div>
+                    </div>
+                    </div>
                 
 
-                <div class="form-row">
-                    <div class="col">
-                        <div class="form-group">
-                            <label for="size">Size</label>
-                            <input type="text" value="<?php echo $this->data['size'] ?>" class="form-control" id="size" name="size" aria-describedby="size" placeholder="Enter size">
-                        </div>
-                    </div>
-                    <div class="col">
-                        <div class="form-group">
-                            <label for="price">Price</label>
-                            <input type="text" value="<?php echo $this->data['price']?>" class="form-control" id="price" name="price" aria-describedby="price" placeholder="Enter price">
-                        </div>
-                    </div>
-                </div>
-
-                <button type="submit" class="btn btn-primary">Submit</button>
-                <a id="return" class="btn btn-secondary" href="<?php echo "?controller=Admin&action=getAllProducts&action=getAllProducts"; ?>">Return</a>
             </form>
         </div>
         </main>
