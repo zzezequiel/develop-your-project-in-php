@@ -23,6 +23,12 @@
 </head>
 
 <body>
+   <?php 
+    if (isset($_SESSION['clientSession'])){
+        header("Location: index.php?controller=Client&action=getAllProducts"); 
+
+    } ?> 
+    
     <!-- HEADER -->
     <?php require_once('assets\templates\admin\header.php')?>
 
