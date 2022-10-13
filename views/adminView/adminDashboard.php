@@ -43,9 +43,6 @@
                             <li class="nav-item">
                                 <a class="nav-link" href="#">Buy Land</a>
                             </li>
-                            <li class="nav-item">
-                                <a class="nav-link disabled no-access">Admin Panel</a>
-                            </li>
                             <li class="nav-item dropdown">
                                 <a class="nav-link dropdown-toggle" href="#" data-bs-toggle="dropdown"
                                     aria-expanded="false">Account</a>
@@ -80,8 +77,8 @@
                                 <div class='row featurette m-5 '>
                                     <div class='col-md-7'>
                                         <h2 class='featurette-heading fw-normal lh-1'>".$products['title']. " <span class='text-muted'> ". $products['size']. " sq. metres</span></h2>
-                                        <p class='lead'>".$products['description']."</p>
                                         <p class='lead'>Price ".$products['price']."</p>
+                                        <h5 class='featurette-heading fw-normal lh-1'>Property of: <b>".$products['name']." ".$products['lastName']."</b></h5> 
                                     </div>
                                     <div class='col-md-5'>
                                     
@@ -91,6 +88,7 @@
                                     </div>
                                     <div class='col-md-5'>
 <<<<<<< HEAD
+<<<<<<< HEAD
                                         <button>Edit</button>
                                         <a class='btn btn-danger' href='?controller=Products&action=deleteProducts&id=" . $products["id"] . "'>Delete</a>
 
@@ -98,6 +96,10 @@
                                     <a class='btn btn-secondary' href='?controller=Admin&action=getProduct&id=" . $products['id'] . "'>Edit</a>
                                     <a class='btn btn-danger' href='?controller=Employee&action=deleteProduct&id=" . $products['id'] . "'>Delete</a>
 >>>>>>> e93d4cd7b1dc0067436a22c46cc1ed723d952461
+=======
+                                    <a class='btn btn-secondary' href='?controller=Admin&action=getProduct&id=" . $products['id'] . "'>Edit</a>
+                                    <a class='btn btn-danger' href='?controller=Employee&action=deleteProduct&id=" . $products['id'] . "'>Delete</a>
+>>>>>>> devBala
                                     </div>
                                 </div>";
 
