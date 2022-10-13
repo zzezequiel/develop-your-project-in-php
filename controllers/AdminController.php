@@ -29,22 +29,26 @@
         $this->view->render("adminView/product");
     }
 
-    function createProduct($request)
+
+
+    function create($request)
     {
         if (sizeof($_POST) > 0) {
-            $product = $this->model->create($_POST);
+            $products = $this->model->create($_POST);
 
-            if ($product[0]) {
+            if ($products[0]) {
                 Header("Location: index.php?controller=Admin&action=getAllProducts");  ///call class views instead
 
             } else {
-                echo $product[1];
+                echo $products[1];
             }
         } else {
             $this->view->action = $request["action"];
             $this->view->render("adminView/addProduct");
         }
     }
+
+
 
     function update($request)
     {
