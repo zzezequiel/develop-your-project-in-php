@@ -34,16 +34,19 @@
 
         function update($product)
         {
-            $query = $this->db->connect()->prepare("UPDATE products
-            SET title = ?, description = ?, location = ?, `pre_build` = ?, size = ?, price = ?
-            WHERE id = ?;");
+            $id = $product["id"];
+            $title = $product["title"];
+            $description = $product["description"];
+            $location = $product["location"];
+            $pre_build = $product["pre_build"];
+            $size =  $product["size"];
+            $price = $product["price"];
+
+            $query = $this->db->connect()->prepare(" UPDATE products
+            SET title = '$title', description = '$description', location = '$location', pre_build = '$pre_build', size = '$size', price = '$price'
+            WHERE id = '$id' ;");
     
-            $query->bindParam(1, $product["title"]);
-            $query->bindParam(2, $product["description"]);
-            $query->bindParam(3, $product["location"]);
-            $query->bindParam(4, $product["pre_build"]);
-            $query->bindParam(5, $product["size"]);
-            $query->bindParam(6, $product["price"]);
+            
             
     
             try {

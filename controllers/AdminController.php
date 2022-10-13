@@ -19,14 +19,14 @@
 
     function getProduct($request)
     {
-        $product = null;
+       // $product = null;
         if (isset($request["id"])) {
             $product = $this->model->getById($request["id"]);
         }
 
         $this->view->action = $request["action"];
         $this->view->data = $product;
-        $this->view->render("adminView/product");
+        $this->view->render("adminView/updateProduct");
     }
 
     function createProduct($request)
@@ -50,14 +50,16 @@
     {
         if (sizeof($_POST) > 0) {
             $product = $this->model->update($_POST);
-            if ($product) {
+            if ($product[0]) {
 
-                Header("Location: index.php?controller=Admin&action=update"); 
+                Header("Location: index.php?controller=Admin&action=getAllProducts"); 
 
             } else {
-                $this->action = $request["action"];
+               // $this->action = $request["action"];
                 $this->error = "The data entered is incorrect, check that there is no other employee with that email.";
-                $this->view->render("adminView/updateProduct");
+                //$this->view->render("adminView/updateProduct");
+                $this->view->render("adminView/adminDashboard");
+
 
             }
         } else {
