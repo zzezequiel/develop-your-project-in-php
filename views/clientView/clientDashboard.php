@@ -18,14 +18,45 @@
     <!-- CSS -->
     <link rel="stylesheet" href="assets/styles.css" />
 
-    <title>Anurati</title>
+    <title>Anunnaki</title>
 </head>
 
 <body>
     <!-- HEADER -->
-    
-    <?php require_once('assets\templates\admin\header.php')?>
-
+    <header>
+        <header>
+            <nav class="navbar navbar-expand-md fixed-top headerNavbar">
+                <div class="container-fluid">
+                    <a class="navbar-brand" href="#"><img src="assets/img/logo.png" alt="Logo"
+                            class="logoDashboard me-3" /></a>
+                    <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+                        data-bs-target="#navbarCollapse" aria-controls="navbarCollapse" aria-expanded="false"
+                        aria-label="Toggle navigation">
+                        <span class="navbar-toggler-icon"></span>
+                    </button>
+                    <div class="collapse navbar-collapse" id="navbarCollapse">
+                        <ul class="navbar-nav me-auto mb-2 mb-md-0">
+                            <li class="nav-item">
+                                <a class="nav-link active1" aria-current="page" href="#">Home</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="#">Buy Land</a>
+                            </li>
+                            <li class="nav-item dropdown">
+                                <a class="nav-link dropdown-toggle" href="#" data-bs-toggle="dropdown"
+                                    aria-expanded="false">Account</a>
+                                <ul class="dropdown-menu">
+                                    <li><a class="dropdown-item scroll-nav" href="#">Profile</a></li>
+                                    <li><a class="dropdown-item scroll-nav" href="#">Setting</a></li>
+                                    <li><a class="dropdown-item scroll-nav" href="#">Log out</a></li>
+                                </ul>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </nav>
+        </header>
+    </header>
     <!-- HEADER -->
 
     <!-- MAIN -->
@@ -44,7 +75,7 @@
                     <div class="carousel-item active">
                         <img src="assets/img/imagen12.jpeg" class="d-block w-100" alt="...">
                         <div class="carousel-caption d-none d-md-block">
-                            <h5 class="font-family-primary">Anurati</h5>
+                            <h5 class="font-family-primary">Anunnaki</h5>
                             <p>The future of the Metaverse</p>
                         </div>
                     </div>
@@ -86,18 +117,15 @@
                              <?php
                              
                              foreach ($this -> data as $index => $products) {
-                                
                         echo "  <hr class='featurette-divider'>
                                 <div class='row featurette m-5'>
                                     <div class='col-md-7'>
-                                        <h2 class='featurette-heading fw-normal lh-1'>".$products['title']. " <span class='text-muted'> ". $products['size']. " sq. metres</span></h2>
+                                        <h2 class='featurette-heading fw-normal lh-1'>".$products['title']. " <span class='text-muted'> ". $products['size']. " metres</span></h2>
                                          <h5 class='featurette-heading fw-normal lh-1'>Property of: <b>".$products['name']." ".$products['lastName']."</b></h5> 
                                         <p class='lead'>".$products['description']."</p>
-                                        <p class='lead'>Price ".$products['price']."</p>
-                                        
-                                        <a id='product_page' class='btn btn-primary' href='?controller=Client&action=getProduct&id=" . $products['id'] ."'>See ofers</a>
-                                        
-                                        
+                                        <p class='lead'>Price ".$products['price']. " $</p>
+                                        <button type='button' class='btn btn-success btn-lg'>Buy</button>
+                                        <button type='button' class='btn btn-secondary btn-lg '>Reoffer</button>
                                     </div>
                                     
                                     <div class='col-md-5'>
