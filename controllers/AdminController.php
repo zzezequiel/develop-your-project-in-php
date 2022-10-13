@@ -5,28 +5,30 @@
     class AdminController{
         use Controller;
 
-    function getAllProducts(){
+        function getAllProducts(){
             $products = $this -> model ->get(); 
 
 
-        if(isset($products)){
-            $this->view->data = $products;
-            $this->view->render("adminView/adminDashboard");      
+            if(isset($products)){
+                $this->view->data = $products;
+                $this->view->render("adminView/adminDashboard");      
+            }
+        
+        
         }
-        
-        
-    }
 
-    function getProduct($request){
+
+
+        function getProduct($request){
         $products = null;
 
-    if (isset($request["id-product"])) {
-        $products = $this->model->getById($request["id-product"]);
-    }
+            if (isset($request["id-product"])) {
+            $products = $this->model->getById($request["id-product"]);
+        }
 
-    $this->view->action = $request["action"];
-    $this->view->data = $products;
-    $this->view->render("products/products");
+        $this->view->action = $request["action"];
+        $this->view->data = $products;
+        $this->view->render("products/products");
 
-    }
+        }
     }

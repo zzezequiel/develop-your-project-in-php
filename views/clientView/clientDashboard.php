@@ -123,7 +123,7 @@
                         echo "  <hr class='featurette-divider'>
                                 <div class='row featurette m-5'>
                                     <div class='col-md-7'>
-                                        <h2 class='featurette-heading fw-normal lh-1'>".$products['title']. " <span class='text-muted'> ". $products['size']. " metres</span></h2>
+                                        <h2 class='featurette-heading fw-normal lh-1'>".$products['title']. " <span class='text-muted'> ". $products['size']. " sq. metres</span></h2>
                                          <h5 class='featurette-heading fw-normal lh-1'>Property of: <b>".$products['name']." ".$products['lastName']."</b></h5> 
                                         <p class='lead'>".$products['description']."</p>
                                         <p class='lead'>Price ".$products['price']."</p>

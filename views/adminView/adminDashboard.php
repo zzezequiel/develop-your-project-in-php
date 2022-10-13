@@ -78,7 +78,7 @@
                         echo "  <hr class='featurette-divider'>
                                 <div class='row featurette m-5 '>
                                     <div class='col-md-7'>
-                                        <h2 class='featurette-heading fw-normal lh-1'>".$products['title']. " <span class='text-muted'> ". $products['size']. " metres</span></h2>
+                                        <h2 class='featurette-heading fw-normal lh-1'>".$products['title']. " <span class='text-muted'> ". $products['size']. " sq. metres</span></h2>
                                         <p class='lead'>".$products['description']."</p>
                                         <p class='lead'>Price ".$products['price']."</p>
                                     </div>
@@ -90,7 +90,8 @@
                                     </div>
                                     <div class='col-md-5'>
                                         <button>Edit</button>
-                                        <button>Delete</button>
+                                        <a class='btn btn-danger' href='?controller=Products&action=deleteProducts&id=" . $products["id"] . "'>Delete</a>
+
                                     </div>
                                 </div>";
 
