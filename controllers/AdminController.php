@@ -49,4 +49,19 @@
             $this->view->render("adminView/adminDashboard");
         }
     }
+
+function create($request){
+    if (sizeof($_POST) > 0) {
+        $products = $this->model->create($_POST);
+
+        if ($products[0]) {
+            header("Location: index.php?controller=Admin&action=getAllProducts");
+        } else {
+            echo $products[1];
+        }
+    } else {
+        $this->view->action = $request["action"];
+        $this->view->render("adminView/addProduct");
+    }
+}
     }

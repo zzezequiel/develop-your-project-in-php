@@ -75,27 +75,36 @@
 
 
         function create($products)
-    {
-        $query = $this->db->connect()->prepare("INSERT INTO products (id_user, title, description, location, pre_build, size, price, img)
-        VALUES
-        (?, ?, ?, ?, ?, ?, ?, ?,);");
+        {
 
-        $query->bindParam(1, $products["id_user"]);
-        $query->bindParam(2, $products["title"]);
-        $query->bindParam(3, $products["description"]);
-        $query->bindParam(4, $products["location"]);
-        $query->bindParam(5, $products["pre_build"]);
-        $query->bindParam(6, $products["size"]);
-        $query->bindParam(7, $products["price"]);
-        $query->bindParam(8, $products["img"]);
+            /* echo 
+            $products["title"].",".$products["description"].",".$products["location"].",".$products["pre_build"].",".$products["size"].",".$products["price"].",".$products["img"]; */
 
-        try {
-            $query->execute();
-            return [true];
-        } catch (PDOException $e) {
-            return [false, $e];
+
+            echo "<br>";
+            print_r ($products);
+            echo "<br>";
+            $query = $this->db->connect()->prepare("INSERT INTO products (id_user, title, description, location, pre_build, size, price, img)
+            VALUES
+            (?, ?, ?, ?, ?, ?, ?, ?);");
+
+
+            $query->bindParam(1, $products["id_user"]);
+            $query->bindParam(2, $products["title"]);
+            $query->bindParam(3, $products["description"]);
+            $query->bindParam(4, $products["location"]);
+            $query->bindParam(5, $products["pre_build"]);
+            $query->bindParam(6, $products["size"]);
+            $query->bindParam(7, $products["price"]);
+            $query->bindParam(8, $products["img"]);
+
+            try {
+                $query->execute();
+                return [true];
+            } catch (PDOException $e) {
+                return [false, $e];
+            }
         }
-    }
 
     }
     
