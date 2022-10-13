@@ -31,8 +31,7 @@
 
 
 
-    function create($request)
-    {
+    function create($request){
         if (sizeof($_POST) > 0) {
             $products = $this->model->create($_POST);
 

@@ -19,6 +19,8 @@
             }
         }
     
+
+
         function getById($id){
             $query = $this->db->connect()->prepare("SELECT p.id, p.title, p.location, p.description,  p.pre_build, p.size, p.price 
             FROM products p
@@ -33,6 +35,8 @@
             }
         }
 
+
+
         function delete($id){
             $query = $this->db->connect()->prepare("DELETE FROM products WHERE id = ?");
             $query->bindParam(1, $id);
@@ -45,6 +49,8 @@
                 return [false, $e];
             }
         }
+
+
 
 
         function update($product){
@@ -71,19 +77,14 @@
    
 
 
-        function create($products)
-        {
-            
-            echo 
-            $products["title"].",".$products["description"].",".$products["location"].",".$products["pre_build"].",".$products["size"].",".$products["price"].",".$products["img"];
-       
 
-            echo "<br>";
+        
+        function create($products){
             $query = $this->db->connect()->prepare("INSERT INTO products (id_user, title, description, location, pre_build, size, price, img)
             VALUES
             (?, ?, ?, ?, ?, ?, ?, ?);");
-        
-    
+
+
             $query->bindParam(1, $products["id_user"]);
             $query->bindParam(2, $products["title"]);
             $query->bindParam(3, $products["description"]);
@@ -92,7 +93,7 @@
             $query->bindParam(6, $products["size"]);
             $query->bindParam(7, $products["price"]);
             $query->bindParam(8, $products["img"]);
-    
+
             try {
                 $query->execute();
                 return [true];

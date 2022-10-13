@@ -38,9 +38,9 @@
             <div class="form-row">
                 <div class="col">
                     <div class="form-group">
-                    
-                            <option value="<?php echo isset($this->data['id_user']); ?>"> Property of : Admin</option>
-                        </select>
+                    <label for="title">Property of:</label>
+                    <input required type="name" value="1" class="form-control" id="id_user" name="id_user" aria-describedby="id_user" placeholder="Admin" readonly>
+                            
                     </div>
                     <br>
 
@@ -48,8 +48,7 @@
                 <div class="col">
                     <div class="form-group">
                         <label for="title">Title</label>
-                        <input required type="name" value="<?php echo isset($this->data['title']) ? $this->data['title'] : null ?>" class="form-control" id="title" name="title" aria-describedby="titleHelp" placeholder="Enter title">
-                        <small id="titleHelp" class="form-text text-muted">We'll never share your email with anyone else.</small>
+                        <input required type="name" value="" class="form-control" id="title" name="title" aria-describedby="titleHelp" placeholder="Enter title">
                         <br>
                     </div>
                 </div>
@@ -60,7 +59,7 @@
                 <div class="col">
                     <div class="form-group">
                         <label for="size">Size</label>
-                        <input required type="number" value="<?php echo isset($this->data['size']) ? $this->data['size'] : null ?>" class="form-control" id="size" name="size" aria-describedby="sizeHelp" placeholder="Enter Size">
+                        <input required type="number" value="" class="form-control" id="size" name="size" aria-describedby="sizeHelp" placeholder="Enter Size">
                         <br>
                     </div>
                 </div>
@@ -69,8 +68,8 @@
                         <label for="pre_build">Prebuild</label>
                         <select name="pre_build" class="form-control" id="pre_build" required>
                             <option value="">Please Select</option>
-                            <option value="1" <?php echo isset($this->data['pre_build']) && $this->data['pre_build']  == 1 ? 'selected' : null; ?>>Constructed</option>
-                            <option value="2" <?php echo isset($this->data['pre_build']) && $this->data['pre_build']  == 2 ? 'selected' : null; ?>>Structure</option>
+                            <option value="1">Constructed</option>
+                            <option value="2">Structure</option>
                         </select>
                         <br>
                     </div>
@@ -81,14 +80,14 @@
                 <div class="col">
                     <div class="form-group">
                         <label for="location">Location</label>
-                        <input type="name" value="<?php echo isset($this->data['location']) ? $this->data['location'] : null ?>" class="form-control" id="location" name="location" aria-describedby="locationHelp" placeholder="Enter location">
+                        <input type="name" value="" class="form-control" id="location" name="location" aria-describedby="locationHelp" placeholder="Enter location">
                     </div>
                     <br>
                 </div>
                 <div class="col">
                     <div class="form-group">
                         <label for="Price">Price</label>
-                        <input type="number" value="<?php echo isset($this->data['price']) ? $this->data['price'] : null ?>" class="form-control" id="price" name="price" aria-describedby="priceHelp" placeholder="Enter price">
+                        <input type="number" value="" class="form-control" id="price" name="price" aria-describedby="priceHelp" placeholder="Enter price">
                         <br>
                     </div>
                 </div>
@@ -98,19 +97,19 @@
                 <div class="col">
                     <div class="form-group">
                         <label for="description">Description</label>
-                        <textarea value="<?php echo isset($this->data['description']) ? $this->data['description'] : null ?>" class="form-control" id="description" name="description" cols="20" rows="20" aria-describedby="descriptionHelp" placeholder="Enter description"></textarea><br>
+                        <textarea value="" class="form-control" id="description" name="description" cols="20" rows="20" aria-describedby="descriptionHelp" placeholder="Enter description"></textarea><br>
                     </div>
                 </div>
                 <div class="col">
                     <div class="form-group">
                         <label for="age">Upload Image</label>
-                        <input type="file" value="<?php echo isset($this->data['img']) ? $this->data['img'] : null ?>" class="form-control" id="img" name="img" aria-describedby="imgHelp" placeholder="Enter img"><br>
+                        <input type="file" value="" class="form-control" id="img" name="img" aria-describedby="imgHelp" placeholder="Enter img"><br>
                     </div>
                 </div>
             </div>
 
             <button type="submit" class="btn btn-primary">Submit</button>
-            <a id="return" class="btn btn-secondary" href="<?php echo "?controller=Admin&action=getAllProducts&action=getAllProducts"; ?>">Return</a><br>
+            <a id="return" class="btn btn-secondary" href="">Return</a><br>
         </form>
     </div>
 </body>
