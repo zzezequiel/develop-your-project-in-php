@@ -27,11 +27,13 @@
 
         if (isset($request["id"])) {
             $products = $this->model->getById($request["id"]);
-        }
+           
 
+        }
+        
         $this->view->action = $request["action"];
         $this->view->data = $products;
-        $this->view->render("clientView/products");
+        $this->view->render("clientView/product");
 
         }
     }
