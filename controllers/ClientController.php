@@ -18,8 +18,8 @@
         function getProduct($request){
             $products = null;
 
-        if (isset($request["idProduct"])) {
-            $products = $this->model->getById($request["idProduct"]);
+        if (isset($request["id"])) {
+            $products = $this->model->getById($request["id"]);
         }
 
         $this->view->action = $request["action"];

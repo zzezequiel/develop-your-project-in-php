@@ -120,6 +120,7 @@
                              <?php
                              
                              foreach ($this -> data as $index => $products) {
+                                
                         echo "  <hr class='featurette-divider'>
                                 <div class='row featurette m-5'>
                                     <div class='col-md-7'>
@@ -127,6 +128,7 @@
                                          <h5 class='featurette-heading fw-normal lh-1'>Property of: <b>".$products['name']." ".$products['lastName']."</b></h5> 
                                         <p class='lead'>".$products['description']."</p>
                                         <p class='lead'>Price ".$products['price']."</p>
+                                        
                                         <button type='button' class='btn btn-success btn-lg'>Buy</button>
                                         <button type='button' class='btn btn-secondary btn-lg '>Reoffer</button>
                                     </div>
