@@ -43,17 +43,12 @@
 
 <!-- //generar select -->
             <div class="form-row">
-                <div class="col">
-                    <div class="form-group">
-                        <label for="property">Property</label>
-                        <input type="number" value="<?php echo isset($this->data['id_user']) ? $this->data['id_user'] : null ?>" class="form-control" id="id_user" name="id_user" aria-describedby="id_user" placeholder="Enter id_user">
-                    </div>
-                </div>
+
 
                 <div class="col">
                     <div class="form-group">
                     <label for="property">Location</label>
-                        <input type="text" value="<?php echo isset($this->data['id_user']) ? $this->data['id_user'] : null ?>" class="form-control" id="id_user" name="id_user" aria-describedby="id_user" placeholder="Enter id_user">
+                        <input type="text" value="<?php echo isset($this->data['location']) ? $this->data['location'] : null ?>" class="form-control" id="location" name="location" aria-describedby="location" placeholder="Enter location">
                     </div>
                 </div>
             </div>
