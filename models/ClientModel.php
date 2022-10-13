@@ -31,3 +31,4 @@ class ClientModel extends Model{
             return [];
         }
     }
+}
