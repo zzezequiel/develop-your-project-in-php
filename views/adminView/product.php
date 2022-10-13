@@ -72,10 +72,14 @@
              
             <form class="mb-5 needs-validation" action="index.php?controller=Admin&action=update" method="post">
 <<<<<<< HEAD
+<<<<<<< HEAD
                 <input type="hidden" name="id" value="<?php echo isset($this->data['id']) ? $this->data['id'] : null ?>">
 =======
                 <input type="hidden" name="idproduct" value="<?php echo isset($this->data['idproduct']) ? $this->data['idproduct'] : null ?>">
 >>>>>>> devBala
+=======
+                <input type="hidden" name="id" value="<?php echo isset($this->data['id']) ? $this->data['id'] : null ?>">
+>>>>>>> c149a858c65b250f7446a4eea0fbcd9dc0a075ba
                 <div class="form-row">
                     <div class="col">
                         <div class="form-group">
@@ -102,11 +106,15 @@
                     <div class="col">
                         <div class="form-group">
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> c149a858c65b250f7446a4eea0fbcd9dc0a075ba
                             <label for="pre_build">Content</label>
                             <select name="pre_build" class="form-control" id="pre_build" required>
                                 <option value="">Please Select</option>
                                 <option value="1" <?php echo isset($this->data['pre_build']) && $this->data['pre_build']  == 1 ? 'selected' : null; ?>>Construct</option>
                                 <option value="2" <?php echo isset($this->data['pre_build']) && $this->data['pre_build']  == 2 ? 'selected' : null; ?>>Not constructed</option>
+<<<<<<< HEAD
 =======
                             <label for="prebuild">Content</label>
                             <select name="prebuild" class="form-control" id="prebuild" required>
@@ -114,6 +122,8 @@
                                 <option value="1" <?php echo isset($this->data['prebuild']) && $this->data['prebuild']  == 1 ? 'selected' : null; ?>>Construct</option>
                                 <option value="2" <?php echo isset($this->data['prebuild']) && $this->data['prebuild']  == 2 ? 'selected' : null; ?>>Not constructed</option>
 >>>>>>> devBala
+=======
+>>>>>>> c149a858c65b250f7446a4eea0fbcd9dc0a075ba
                             </select>
                         </div>
                     </div>

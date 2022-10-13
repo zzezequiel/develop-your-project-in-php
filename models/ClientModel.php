@@ -3,9 +3,9 @@
     class ClientModel extends Model{
 
         function get(){
-            $query = $this->db->connect()->prepare("SELECT p.title, ud.first_name as 'name', ud.last_name as 'lastName', p.location, p.description, p.pre_build, p.size, p.price, p.img
+            $query = $this->db->connect()->prepare("SELECT p.title, ud.`first-name` as 'name', ud.`last-name` as 'lastName', p.location, p.description, p.`pre-build`, p.size, p.price, p.img
             FROM products p
-            LEFT JOIN userdata ud ON p.id_user = ud.id
+            LEFT JOIN userdata ud ON p.`id-user` = ud.id
             ORDER BY p.id;");
 
             try {
@@ -17,18 +17,18 @@
             }
         }
     
-         function getByIdProduct($id){
-            $query = $this->db->connect()->prepare("SELECT p.title, ud.first_name as 'name', ud.last_name as 'lastName', p.location, p.description, p.pre_build, p.size, p.price, p.img
+      /*   function getByIdProduct($idProduct){
+            $query = $this->db->connect()->prepare("SELECT p.`id-product`, p.title, p.location, p.description, p.`pre-build`, p.size, p.price 
             FROM products p
-            WHERE id = $id;");
+            WHERE id-products = $idProduct;");
         
             try {
                 $query->execute();
-                $id = $query->fetch();
-                return $id;
+                $idProduct = $query->fetch();
+                return $idProduct;
             } catch (PDOException $e) {
                 return [];
             }
-        }
+        } */
     }
     

@@ -3,10 +3,11 @@
     class AdminModel extends Model{
 
         function get(){
-            $query = $this->db->connect()->prepare("SELECT p.title, ud.first_name as 'name', ud.last_name as 'lastName', p.location, p.description, p.pre_build, p.size, p.price, p.img
-            FROM products p
-            LEFT JOIN userdata ud ON p.id_user = ud.id
-            ORDER BY p.id;");
+            $query = $this->db->connect()->prepare("SELECT * FROM products
+            /* p.`id-product`, p.title, ui.`first-name`, p.location, p.description, p.`pre-builtd`, p.size, p.price 
+            FROM products p  */
+           /*  INNER JOIN `users-info` ui ON p.`id-product` = ui.`id-product`
+            ORDER BY p.`id-product` ASC */;");
 
             try {
                 $query->execute();
@@ -31,7 +32,6 @@
             }
         }
 
-<<<<<<< HEAD
         function delete($id){
             $query = $this->db->connect()->prepare("DELETE FROM products WHERE id = ?");
             $query->bindParam(1, $id);
@@ -47,12 +47,16 @@
 
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
+=======
+>>>>>>> c149a858c65b250f7446a4eea0fbcd9dc0a075ba
         function update($product)
         {
             $query = $this->db->connect()->prepare("UPDATE products
             SET title = ?, description = ?, location = ?, `pre_build` = ?, size = ?, price = ?
             WHERE id = ?;");
+<<<<<<< HEAD
 =======
         function update($product)
         {
@@ -60,15 +64,21 @@
             SET title = ?, description = ?, location = ?, prebuild = ?, size = ?, price = ?
             WHERE idproduct = ?;");
 >>>>>>> devBala
+=======
+>>>>>>> c149a858c65b250f7446a4eea0fbcd9dc0a075ba
     
             $query->bindParam(1, $product["title"]);
             $query->bindParam(2, $product["description"]);
             $query->bindParam(3, $product["location"]);
 <<<<<<< HEAD
+<<<<<<< HEAD
             $query->bindParam(4, $product["pre_build"]);
 =======
             $query->bindParam(4, $product["prebuild"]);
 >>>>>>> devBala
+=======
+            $query->bindParam(4, $product["pre_build"]);
+>>>>>>> c149a858c65b250f7446a4eea0fbcd9dc0a075ba
             $query->bindParam(5, $product["size"]);
             $query->bindParam(6, $product["price"]);
             
@@ -80,6 +90,7 @@
                 return [false, $e];
             }
         }
+<<<<<<< HEAD
 <<<<<<< HEAD
 >>>>>>> e93d4cd7b1dc0067436a22c46cc1ed723d952461
 =======
@@ -108,5 +119,7 @@
         }
     }
 >>>>>>> devBala
+=======
+>>>>>>> c149a858c65b250f7446a4eea0fbcd9dc0a075ba
     }
     
