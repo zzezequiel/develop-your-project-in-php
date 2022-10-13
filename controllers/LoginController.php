@@ -17,7 +17,7 @@ class LoginController
     {   //session_start();
         session_unset();
         session_destroy();
-        echo "logout";
+        require_once VIEWS . "loginView/login.php";
 
     }
     
