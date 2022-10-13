@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Servidor: 127.0.0.1
--- Tiempo de generación: 13-10-2022 a las 09:53:10
+-- Tiempo de generación: 13-10-2022 a las 10:16:01
 -- Versión del servidor: 10.4.25-MariaDB
 -- Versión de PHP: 8.1.10
 
@@ -29,11 +29,11 @@ SET time_zone = "+00:00";
 
 CREATE TABLE `products` (
   `id` int(11) NOT NULL,
-  `id-user` int(50) NOT NULL,
+  `id_user` int(50) NOT NULL,
   `title` varchar(50) NOT NULL,
   `description` text NOT NULL,
   `location` varchar(50) NOT NULL,
-  `pre-build` varchar(50) NOT NULL,
+  `pre_build` varchar(50) NOT NULL,
   `size` int(5) NOT NULL,
   `price` int(10) NOT NULL,
   `img` text NOT NULL
@@ -43,7 +43,7 @@ CREATE TABLE `products` (
 -- Volcado de datos para la tabla `products`
 --
 
-INSERT INTO `products` (`id`, `id-user`, `title`, `description`, `location`, `pre-build`, `size`, `price`, `img`) VALUES
+INSERT INTO `products` (`id`, `id_user`, `title`, `description`, `location`, `pre_build`, `size`, `price`, `img`) VALUES
 (1, 1, 'Space art', 'Space gallety art, where you can sell and buy NFTs and have fun!', 'Andromeda ', 'Constucted', 280, 5000, 'assets\\img\\a90032f1-1c4a-4860-80d0-ab2feb689b92.jpg'),
 (2, 2, 'HELIX Founder Pass', 'The Founder Pass  is the best way to take full advantage of one of the most immersive Metaverse experiences on the Blockchain. The Founder Pass is 5000 NFTs that grant 3 months early access to play HELIX. Founder Pass holders will be entitled to exclusive airdrops, free land, exclusive designer clothes, supercars, and much more.', 'Helluland', 'Constucted', 302, 9000, 'assets\\img\\ciudad-virtual-gettyimages-1135935658.webp'),
 (3, 1, 'Sandbox\'s LANDs', 'The Sandbox is a community-driven platform where creators can monetize voxel assets and gaming experiences on the blockchain. The Sandbox metaverse comprises a map made up of 166,464 LANDS. LAND owners can host contests and events, stake SAND to earn and customize assets, monetize assets and experiences, vote in the metaverse governance, play games that you or others create, and more! Trade the collection and keep your eyes peeled for future drops.', 'Markland', 'Constructed', 75, 1200, 'assets\\img\\Metaverse-Featured.jpg'),
@@ -63,8 +63,8 @@ INSERT INTO `products` (`id`, `id-user`, `title`, `description`, `location`, `pr
 
 CREATE TABLE `userdata` (
   `id` int(11) NOT NULL,
-  `first-name` varchar(50) NOT NULL,
-  `last-name` varchar(50) NOT NULL,
+  `first_name` varchar(50) NOT NULL,
+  `last_name` varchar(50) NOT NULL,
   `age` int(3) NOT NULL,
   `phone` int(10) NOT NULL,
   `city` varchar(50) NOT NULL
@@ -74,7 +74,7 @@ CREATE TABLE `userdata` (
 -- Volcado de datos para la tabla `userdata`
 --
 
-INSERT INTO `userdata` (`id`, `first-name`, `last-name`, `age`, `phone`, `city`) VALUES
+INSERT INTO `userdata` (`id`, `first_name`, `last_name`, `age`, `phone`, `city`) VALUES
 (1, 'Admin', '', 0, 0, ''),
 (2, 'Alex', 'Balaguer', 30, 677147018, 'Barcelona'),
 (3, 'Ezequiel', 'Zvirgzdins', 19, 689982172, 'Barcelona'),
@@ -88,7 +88,7 @@ INSERT INTO `userdata` (`id`, `first-name`, `last-name`, `age`, `phone`, `city`)
 --
 
 CREATE TABLE `users` (
-  `user-id` int(11) NOT NULL,
+  `user_id` int(11) NOT NULL,
   `email` varchar(50) NOT NULL,
   `password` varchar(50) NOT NULL,
   `roll` varchar(50) NOT NULL
@@ -98,7 +98,7 @@ CREATE TABLE `users` (
 -- Volcado de datos para la tabla `users`
 --
 
-INSERT INTO `users` (`user-id`, `email`, `password`, `roll`) VALUES
+INSERT INTO `users` (`user_id`, `email`, `password`, `roll`) VALUES
 (1, 'admin@admin.com', '000000', 'admin'),
 (2, 'bala@gmail.com', '000000', 'client'),
 (5, 'alvaro@gmail.com', '000000', 'client'),
@@ -114,7 +114,7 @@ INSERT INTO `users` (`user-id`, `email`, `password`, `roll`) VALUES
 --
 ALTER TABLE `products`
   ADD PRIMARY KEY (`id`),
-  ADD KEY `id-user` (`id-user`);
+  ADD KEY `id-user` (`id_user`);
 
 --
 -- Indices de la tabla `userdata`
@@ -126,7 +126,7 @@ ALTER TABLE `userdata`
 -- Indices de la tabla `users`
 --
 ALTER TABLE `users`
-  ADD KEY `user-id` (`user-id`);
+  ADD KEY `user-id` (`user_id`);
 
 --
 -- AUTO_INCREMENT de las tablas volcadas
@@ -152,13 +152,13 @@ ALTER TABLE `userdata`
 -- Filtros para la tabla `products`
 --
 ALTER TABLE `products`
-  ADD CONSTRAINT `products_ibfk_1` FOREIGN KEY (`id-user`) REFERENCES `userdata` (`id`) ON UPDATE CASCADE;
+  ADD CONSTRAINT `products_ibfk_1` FOREIGN KEY (`id_user`) REFERENCES `userdata` (`id`) ON UPDATE CASCADE;
 
 --
 -- Filtros para la tabla `users`
 --
 ALTER TABLE `users`
-  ADD CONSTRAINT `users_ibfk_1` FOREIGN KEY (`user-id`) REFERENCES `userdata` (`id`) ON UPDATE CASCADE;
+  ADD CONSTRAINT `users_ibfk_1` FOREIGN KEY (`user_id`) REFERENCES `userdata` (`id`) ON UPDATE CASCADE;
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
