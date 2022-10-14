@@ -26,42 +26,10 @@
 </head>
 
 <body>
-<header>
-        <header>
-            <nav class="navbar navbar-expand-md fixed-top headerNavbar">
-                <div class="container-fluid">
-                    <a class="navbar-brand" href="#"><img src="assets/img/logo.png" alt="Logo"
-                            class="logoDashboard me-3" /></a>
-                    <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
-                        data-bs-target="#navbarCollapse" aria-controls="navbarCollapse" aria-expanded="false"
-                        aria-label="Toggle navigation">
-                        <span class="navbar-toggler-icon"></span>
-                    </button>
-                    <div class="collapse navbar-collapse" id="navbarCollapse">
-                        <ul class="navbar-nav me-auto mb-2 mb-md-0">
-                            <li class="nav-item">
-                                <a class="nav-link active1" aria-current="page" href="#">Home</a>
-                            </li>
-                            <li class="nav-item">
-                                <a class="nav-link" href="#">Buy Land</a>
-                            </li>
+<!-- header-->
 
-                            <li class="nav-item dropdown">
-                                <a class="nav-link dropdown-toggle" href="#" data-bs-toggle="dropdown"
-                                    aria-expanded="false">Account</a>
-                                <ul class="dropdown-menu">
-                                    <li><a class="dropdown-item scroll-nav" href="#">Profile</a></li>
-                                    <li><a class="dropdown-item scroll-nav" href="#">Setting</a></li>
-                                    <li><a class="dropdown-item scroll-nav" href="#">Log out</a></li>
-                                </ul>
-                            </li>
-                        </ul>
-                    </div>
-                    
-                </div>
-            </nav>
-        </header>
-    </header>
+<?php require_once('assets\templates\admin\header.php')?>
+<!-- main -->
     <main>
         <div class="container-xl mt-5">
             <h1>land's page!</h1>
@@ -133,8 +101,9 @@
                         <div class="col ms-5">
                             <div class="form-group">
                                 
-                                <img width="720" height="405"src=" <?php echo $this->data['img']?>">
-                                <input type="file" class="mt-4"  id="img" name="img" aria-describedby="img" aria-describedby="img" placeholder="Enter img">
+                                <img width="720" height="405" src=" <?php echo $this->data['img']?>">
+                                <label for="imgsrc">Image source path</label>
+                                <input type="text"  value="<?php echo $this->data['img']?>"id="img" name="img" class="form-control" aria-describedby="img" aria-describedby="img" placeholder="Enter img">
                             </div>
                         </div>
                     </div>

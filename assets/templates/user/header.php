@@ -2,7 +2,7 @@
     <header>
         <nav class="navbar navbar-expand-md fixed-top headerNavbar">
             <div class="container-fluid">
-                <a class="navbar-brand" href="#"><img src="assets/img/logo.png" alt="Logo"
+                <a class="navbar-brand" href="index.php?controller=Client&action=getAllproducts"><img src="assets/img/logo.png" alt="Logo"
                         class="logoDashboard me-3" /></a>
                 <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
                     data-bs-target="#navbarCollapse" aria-controls="navbarCollapse" aria-expanded="false"

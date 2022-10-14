@@ -36,9 +36,9 @@
         function update($request)
     {
         if (sizeof($_POST) > 0) {
-            $employee = $this->model->update($_POST);
+            $products = $this->model->update($_POST);
 
-            if ($employee[0]) {
+            if ($products[0]) {
                 header("Location: index.php?controller=Admin&action=getAllProducts");
             } else {
                 $this->action = $request["action"];
