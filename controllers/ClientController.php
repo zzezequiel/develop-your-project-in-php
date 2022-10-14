@@ -26,9 +26,15 @@
             $products = null;
 
         if (isset($request["id"])) {
-            $products = $this->model->getById($request["id"]);
-           
 
+            if( $_SESSION['clientSession'] =="Guest"){
+     
+                header("Location: index.php?controller=Login&action=logOut");
+                    
+            }
+            else{
+            $products = $this->model->getById($request["id"]);
+            }
         }
         
         $this->view->action = $request["action"];

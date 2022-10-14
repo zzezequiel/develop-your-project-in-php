@@ -50,7 +50,15 @@ class LoginController
             } 
         }
 
-       
+       function guest(){
+        $guest = "Guest";
+
+            session_start();
+            $_SESSION['userSession'] = $guest;
+            $_SESSION['clientSession'] = $guest;
+            header("Location: index.php?controller=Client&action=getAllProducts");
+
+       }
     }
 
 
