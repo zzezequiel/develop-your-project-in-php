@@ -22,8 +22,9 @@
 </head>
 
 <body>
+
     <div class="container">
-        <h1>Employee's page!</h1>
+        <h1>Create new product</h1>
         </br>
 
         <?php
@@ -108,8 +109,8 @@
                 </div>
             </div>
 
-            <button type="submit" class="btn btn-primary">Submit</button>
-            <a id="return" class="btn btn-secondary" href="">Return</a><br>
+            <a type="submit" class="btn btn-primary btn-lg">Submit</a>
+            <a id="return" class="btn btn-secondary btn-lg" href="<?php echo "?controller=Admin&action=getAllProducts"; ?>">Return</a><br>
         </form>
     </div>
 </body>
