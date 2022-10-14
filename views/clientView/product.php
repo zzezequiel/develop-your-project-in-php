@@ -60,6 +60,18 @@
     </header>
     <main>
         <div class="container-xl mt-5">
+
+        <div class="col" style="width:100%;">
+            <img src="<?php echo $this->data['img']?>" alt="productimg" class="card-img-top">
+            <div class="card-body">
+                <h1 class="text-center"><?php echo $this->data['title']?></h1>
+                <h3 class="text-center"> Property of:<b>  <?php echo $this->data['first_name'] . " " . $this->data['last_name']  ?> </b></h3>
+                <p class="card-text"></p>
+            </div>
+        </div>
+
+
+
             <h1>land's page!</h1>
             </br>
 
