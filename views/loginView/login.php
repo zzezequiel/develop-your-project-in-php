@@ -34,7 +34,7 @@
     } ?>
     
     <!-- HEADER -->
-    <header></header>
+  
     <!-- HEADER -->
 
     <!-- MAIN -->
