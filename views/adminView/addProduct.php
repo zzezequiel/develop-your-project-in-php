@@ -19,9 +19,11 @@
     <link rel="stylesheet" href="assets/styles.css" />
 
     <title>Anunnaki new product</title>
+    <button>create</button>
 </head>
 
 <body>
+
     <div class="container">
         <h1>Employee's page!</h1>
         </br>

@@ -117,6 +117,7 @@
                             <button type="submit" class="btn btn-primary w-100 font-family-primary">
                                 Sign in
                             </button>
+                            <a class="btn btn-secundary mt-4 text-light w-100 font-family-primary" href="<?php echo "?controller=Login&action=guest"; ?>">Sing in as Guest</a>
                         </form>
                         <div id="footerLogin">
                             <p class="text-center text-muted font-family-primary">

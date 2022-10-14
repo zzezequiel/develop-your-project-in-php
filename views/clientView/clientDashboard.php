@@ -18,13 +18,13 @@
     <!-- CSS -->
     <link rel="stylesheet" href="assets/styles.css" />
 
-    <title>Anurati</title>
+    <title>Anunnaki</title>
 </head>
 
 <body>
     <!-- HEADER -->
     
-    <?php require_once('assets\templates\admin\header.php')?>
+    <?php require_once('assets\templates\user\header.php')?>
 
     <!-- HEADER -->
 
@@ -44,22 +44,22 @@
                     <div class="carousel-item active">
                         <img src="assets/img/imagen12.jpeg" class="d-block w-100" alt="...">
                         <div class="carousel-caption d-none d-md-block">
-                            <h5 class="font-family-primary">Anurati</h5>
-                            <p>The future of the Metaverse</p>
+                            <h1 class="font-family-primary">Anunnaki</h1>
+                            <h2>The future of the Metaverse</h2>
                         </div>
                     </div>
                     <div class="carousel-item">
                         <img src="assets/img/imagen3.png" class="d-block w-100" alt="...">
                         <div class="carousel-caption d-none d-md-block">
-                            <h5></h5>
-                            <p></p>
+                        <h1 class="font-family-primary">Anunnaki</h1>
+                            <h2>The future of the Metaverse</h2>
                         </div>
                     </div>
                     <div class="carousel-item">
                         <img src="assets/img/imagen15.jpg" class="d-block w-100" alt="...">
                         <div class="carousel-caption d-none d-md-block">
-                            <h5></h5>
-                            <p></p>
+                        <h1 class="font-family-primary">Anunnaki</h1>
+                            <h2>The future of the Metaverse</h2>
                         </div>
                     </div>
                 </div>
@@ -93,7 +93,7 @@
                                         <h2 class='featurette-heading fw-normal lh-1'>".$products['title']. " <span class='text-muted'> ". $products['size']. " sq. metres</span></h2>
                                          <h5 class='featurette-heading fw-normal lh-1'>Property of: <b>".$products['name']." ".$products['lastName']."</b></h5> 
                                         <p class='lead'>".$products['description']."</p>
-                                        <p class='lead'>Price ".$products['price']."</p>
+                                        <p class='lead'>Price ".$products['price']." $</p>
                                         
                                         <a id='product_page' class='btn btn-primary' href='?controller=Client&action=getProduct&id=" . $products['id'] ."'>See ofers</a>
                                         
@@ -113,6 +113,7 @@
 
                                 
                             } 
+                           
                             ?> 
                         
 
@@ -151,6 +152,11 @@
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js"
         integrity="sha384-OERcA2EqjJCMA+/3y+gxIOqMEjwtxJY7qPCqsdltbNJuaOe923+mo//f6V8Qbsw3"
         crossorigin="anonymous"></script>
+       
+        <!--sweet alert -->
+        <script src="//cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+
+
 </body>
 
 </html>

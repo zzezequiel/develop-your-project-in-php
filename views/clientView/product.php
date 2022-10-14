@@ -42,9 +42,6 @@
                             <li class="nav-item">
                                 <a class="nav-link" href="#">Buy Land</a>
                             </li>
-                            <li class="nav-item">
-                                <a class="nav-link disabled no-access">Admin Panel</a>
-                            </li>
                             <li class="nav-item dropdown">
                                 <a class="nav-link dropdown-toggle" href="#" data-bs-toggle="dropdown"
                                     aria-expanded="false">Account</a>
@@ -67,16 +64,17 @@
             </br>
 
              
-            <h5> Property of:  <?php echo $this->data['first_name'] . " " . $this->data['last_name']  ?> </b></h5> 
+            <h5> Property of:<b>  <?php echo $this->data['first_name'] . " " . $this->data['last_name']  ?> </b></h5> 
+            <hr>
             
-                <h3> <?php echo $this->data['id'] ?> </h3>
+
                 <div class="d-flex flex-row justify-content-between">
                     <div class=" row">
                         <div class="flex-column">
                             <div class="col">
                                 <div class="form-group">
-                                    <label for="name">Title</label>
-                                    <h3> <?php echo $this->data['title']?> </h3>
+                                    <label for="name"><b>Title</b></label>
+                                    <p> <?php echo $this->data['title']?> </p>
                                 </div>
 
                             </div>
@@ -85,14 +83,14 @@
                         <div class="form-row">
                             <div class="col">
                                 <div class="form-group">
-                                    <label for="location">Location</label>
-                                    <h3> <?php echo $this->data['location']?> </h3>
+                                    <label for="location"><b>Location</b></label>
+                                    <p> <?php echo $this->data['location']?> </p>
                                 </div>
                             </div>
                             <div class="col">
                                 <div class="form-group">
-                                    <label for="pre_build">Content</label>
-                                    <h3> <?php echo $this->data['pre_build'] ?> </h3>
+                                    <label for="pre_build"><b>Content</b></label>
+                                    <p> <?php echo $this->data['pre_build'] ?> </p>
                                 </div>
                             </div>
                         </div>
@@ -102,25 +100,25 @@
                         <div class="form-row">
                             <div class="col">
                                 <div class="form-group">
-                                    <label for="size">Size</label>
-                                    <h3> <?php echo $this->data['size'] ?> </h3>
+                                    <label for="size"><b>Size</b></label>
+                                    <p> <?php echo $this->data['size'] ?> </p>
                                 </div>
                             </div>
                             <div class="col">
                                 <div class="form-group">
-                                    <label for="price">Price</label>
-                                    <h3> <?php echo $this->data['price']?> </h3>
+                                    <label for="price"><b>Price</b></label>
+                                    <p> <?php echo $this->data['price']?> $ </p>
                                 </div>
                             </div>
                             <div class="col">
                                 <div class="form-group">
-                                    <label for="description">Description</label>
-                                    <h3> <?php echo $this->data['description'] ?> </h3>
+                                    <label for="description"><b>Description</b></label>
+                                    <p> <?php echo $this->data['description'] ?> </p>
                                 </div>
                             </div>
                         </div>
                             <div class="d-flex justify-content-between mt-4">
-                                <a id="return" class="btn btn-secondary" href="<?php echo "?controller=Admin&action=getAllProducts"; ?>">Return</a>
+                                <a id="return" class="btn btn-secondary btn-lg" href="<?php echo "?controller=Client&action=getAllProducts"; ?>">Return</a>
                                         <button type='button' class='btn btn-success btn-lg'>Buy</button>
                                         <button type='button' class='btn btn-secondary btn-lg '>Reoffer</button>
                             </div>
@@ -133,8 +131,8 @@
                         <div class="col ms-5">
                             <div class="form-group">
                                 
-                                <img src=" <?php echo $this->data['img']?>">
-                                <input type="file" class="mt-4"  id="img" name="img" aria-describedby="img" aria-describedby="img" placeholder="Enter img">
+                                <img width="720" height="405"src=" <?php echo $this->data['img']?>">
+                               
                             </div>
                         </div>
                     </div>
