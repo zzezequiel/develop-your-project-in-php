@@ -19,7 +19,7 @@
     <!-- CSS -->
     <link rel="stylesheet" href="assets/styles.css" />
 
-    <title>Anurati</title>
+    <title>Anunnaki</title>
 </head>
 
 <body>
@@ -60,86 +60,41 @@
     </header>
     <main>
         <div class="container-xl mt-5">
-            <h1>land's page!</h1>
-            </br>
 
-             
-            <h5> Property of:<b>  <?php echo $this->data['first_name'] . " " . $this->data['last_name']  ?> </b></h5> 
-            <hr>
+            <div class="col" style="width:100%;">
+                <img src="<?php echo $this->data['img']?>" alt="productimg" class="card-img-top">
+                <br><br>
+                <div class="card-body">
+                    <h1 class="text-center text-uppercase font-family-primary"><?php echo $this->data['title']?></h1>
+                    <h3 class="text-center"> Property of:<b>  <?php echo $this->data['first_name'] . " " . $this->data['last_name']  ?> </b></h3>
+                    <hr>
+                    <div class="row">
+                        <h4 class="col card-text text-center"><b>Location</b></h4>
+                        <h4 class="col card-text text-center"><b>Content</b></h4>
+                        <h4 class="col card-text text-center"><b>Size</b></h4>
+                        <h4 class="col card-text text-center"><b>Price</b></h4>
+                    </div>
+
+                    <div class="row">
+                        <p class="col text-center"> <?php echo $this->data['location']?> </p>
+                        <p class="col text-center"> <?php echo $this->data['pre_build'] ?> </p>
+                        <p class="col text-center"> <?php echo $this->data['size'] ?> meters</p>
+                        <p class="col text-center"> <?php echo $this->data['price'] ?> </p>
+                    </div>
+                </div>
+
             
+                <h4 class="col card-text text-center mt-2"><b>Description</b></h4>
+                <p class="col text-center"> <?php echo $this->data['description'] ?> </p>
 
-                <div class="d-flex flex-row justify-content-between">
-                    <div class=" row">
-                        <div class="flex-column">
-                            <div class="col">
-                                <div class="form-group">
-                                    <label for="name"><b>Title</b></label>
-                                    <p> <?php echo $this->data['title']?> </p>
-                                </div>
-
-                            </div>
-                            
-
-                        <div class="form-row">
-                            <div class="col">
-                                <div class="form-group">
-                                    <label for="location"><b>Location</b></label>
-                                    <p> <?php echo $this->data['location']?> </p>
-                                </div>
-                            </div>
-                            <div class="col">
-                                <div class="form-group">
-                                    <label for="pre_build"><b>Content</b></label>
-                                    <p> <?php echo $this->data['pre_build'] ?> </p>
-                                </div>
-                            </div>
-                        </div>
-
-                        
-
-                        <div class="form-row">
-                            <div class="col">
-                                <div class="form-group">
-                                    <label for="size"><b>Size</b></label>
-                                    <p> <?php echo $this->data['size'] ?> </p>
-                                </div>
-                            </div>
-                            <div class="col">
-                                <div class="form-group">
-                                    <label for="price"><b>Price</b></label>
-                                    <p> <?php echo $this->data['price']?> $ </p>
-                                </div>
-                            </div>
-                            <div class="col">
-                                <div class="form-group">
-                                    <label for="description"><b>Description</b></label>
-                                    <p> <?php echo $this->data['description'] ?> </p>
-                                </div>
-                            </div>
-                        </div>
-                            <div class="d-flex justify-content-between mt-4">
-                                <a id="return" class="btn btn-secondary btn-lg" href="<?php echo "?controller=Client&action=getAllProducts"; ?>">Return</a>
-                                        <button type='button' class='btn btn-success btn-lg'>Buy</button>
-                                        <button type='button' class='btn btn-secondary btn-lg '>Reoffer</button>
-                            </div>
-                        </div>
-                        
-                    </div>
-                    
-
-                    <div class="row mt-4">
-                        <div class="col ms-5">
-                            <div class="form-group">
-                                
-                                <img width="720" height="405"src=" <?php echo $this->data['img']?>">
-                               
-                            </div>
-                        </div>
-                    </div>
-                    </div>
-
+                <div class="d-flex justify-content-between mt-5">
+                    <a style="width: 30%" id="return" class="btn btn-secondary btn-lg my-5 d-flex align-items-center justify-content-center" href="<?php echo "?controller=Client&action=getAllProducts"; ?>">Return</a>
+                    <a style="width: 30%"type='button' class='btn btn-success btn-lg my-5 d-flex align-items-center justify-content-center'>Buy</a>
+                    <a style="width: 30%" type='button' class='btn btn-secondary btn-lg my-5 d-flex align-items-center justify-content-center'>Reoffer</a>
+                </div>
+            </div>
         </div>
-        </main>
+    </main>
     
 </body>
 
