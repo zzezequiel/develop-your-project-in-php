@@ -1,13 +1,14 @@
 <?php
-
+//comm
     class AdminModel extends Model{
 
 
         function get(){
-            $query = $this->db->connect()->prepare("SELECT p.title, ud.first_name as 'name', ud.last_name as 'lastName', p.location, p.description, p.pre_build, p.size, p.price, p.img
-            FROM products p
-            LEFT JOIN userdata ud ON p.id_user = ud.id
-            ORDER BY p.id;");
+            $query = $this->db->connect()->prepare("SELECT * FROM products
+            /* p.`id-product`, p.title, ui.`first-name`, p.location, p.description, p.`pre-builtd`, p.size, p.price 
+            FROM products p  */
+           /*  INNER JOIN `users-info` ui ON p.`id-product` = ui.`id-product`
+            ORDER BY p.`id-product` ASC */;");
 
 
             try {
@@ -19,10 +20,15 @@
             }
         }
     
+<<<<<<< HEAD
 
 
         function getById($id){
             $query = $this->db->connect()->prepare("SELECT p.id, p.title, p.location, p.description,  p.pre_build, p.size, p.price 
+=======
+        function getById($id){
+            $query = $this->db->connect()->prepare("SELECT p.id, p.title, p.location, p.description,  p.pre_build, p.size, p.price, p.img 
+>>>>>>> develop
             FROM products p
             WHERE id = $id;");
         
@@ -52,6 +58,7 @@
 
 
 
+<<<<<<< HEAD
 
         function update($product){
             $query = $this->db->connect()->prepare("UPDATE products
@@ -65,6 +72,24 @@
             $query->bindParam(4, $product["pre_build"]);
             $query->bindParam(5, $product["size"]);
             $query->bindParam(6, $product["price"]);
+=======
+        function update($product)
+        {
+            $id = $product["id"];
+            $title = $product["title"];
+            $description = $product["description"];
+            $location = $product["location"];
+            $pre_build = $product["pre_build"];
+            $size =  $product["size"];
+            $price = $product["price"];
+            $img = $product["img"];
+
+            $query = $this->db->connect()->prepare(" UPDATE products
+            SET title = '$title', description = '$description', location = '$location', pre_build = '$pre_build', size = '$size', price = '$price', img = '$img'
+            WHERE id = '$id' ;");
+    
+            
+>>>>>>> develop
             
     
             try {
@@ -102,3 +127,9 @@
             }
         }
     }
+<<<<<<< HEAD
+=======
+
+    }
+    
+>>>>>>> develop

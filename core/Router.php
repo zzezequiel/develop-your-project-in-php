@@ -1,10 +1,16 @@
 <?php
+session_start();
 class Router
 {
     function __construct()
-    { // 
-        if (isset($_GET['controller'])) {
+    {      
+
+        
+        
+       if (isset($_GET['controller'])) {
             $controllerName = $_GET['controller'] . "Controller";
+
+
             $controllerPath = CONTROLLERS . $controllerName . ".php";
             $fileExists = file_exists($controllerPath);
             if ($fileExists) {

@@ -126,8 +126,9 @@
                                         <p class='lead'>".$products['description']."</p>
                                         <p class='lead'>Price ".$products['price']."</p>
                                         
-                                        <button type='button' class='btn btn-success btn-lg'>Buy</button>
-                                        <button type='button' class='btn btn-secondary btn-lg '>Reoffer</button>
+                                        <a id='product_page' class='btn btn-primary' href='?controller=Client&action=getProduct&id=" . $products['id'] ."'>See ofers</a>
+                                        
+                                        
                                     </div>
                                     
                                     <div class='col-md-5'>

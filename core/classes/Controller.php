@@ -12,6 +12,13 @@ trait Controller
 
         $action = "";
 
+        if(isset($_SESSION['clientSession'])&& !isset($_GET["action"])){
+            $action="getAllProducts";
+            call_user_func([ClientController, $action], $_REQUEST);
+            //header("Location: index.php?controller=Client&action=getAllProducts");
+        }
+
+        
         if (isset($_GET["action"])) {
             $action = $_REQUEST["action"];
         }
@@ -38,6 +45,6 @@ trait Controller
 
     function error($errorMsg)
     {
-       require_once VIEWS . "/errorView/error.php";
+       require_once VIEWS . "/error/error.php";
      }
 }

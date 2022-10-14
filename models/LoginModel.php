@@ -5,7 +5,7 @@ class LoginModel extends Model
     
     function getAll()
     {
-        $query = $this->db->connect()->prepare("SELECT * FROM `users`
+        $query = $this->db->connect()->prepare("SELECT * FROM `user-login`
         ;");
 
         try {

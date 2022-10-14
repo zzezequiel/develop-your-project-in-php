@@ -22,6 +22,17 @@
 </head>
 
 <body>
+
+<?php
+    if (isset($_SESSION['adminSession'])){
+        header("Location: index.php?controller=Admin&action=getAllProducts"); 
+
+    }
+    if (isset($_SESSION['clientSession'])){
+        header("Location: index.php?controller=Client&action=getAllProducts"); 
+
+    } ?>
+    
     <!-- HEADER -->
     <header></header>
     <!-- HEADER -->

@@ -42,20 +42,29 @@
                             <li class="nav-item">
                                 <a class="nav-link" href="#">Buy Land</a>
                             </li>
+<<<<<<< HEAD
 
+=======
+                            <li class="nav-item">
+                                <a class="nav-link disabled no-access">Admin Panel</a>
+                            </li>
+>>>>>>> develop
                             <li class="nav-item dropdown">
                                 <a class="nav-link dropdown-toggle" href="#" data-bs-toggle="dropdown"
                                     aria-expanded="false">Account</a>
                                 <ul class="dropdown-menu">
                                     <li><a class="dropdown-item scroll-nav" href="#">Profile</a></li>
                                     <li><a class="dropdown-item scroll-nav" href="#">Setting</a></li>
-                                    <li><a class="dropdown-item scroll-nav" href="#">Log out</a></li>
+                                    <li><a class="dropdown-item scroll-nav" href="?controller=Login&action=logOut">Log out</a></li>
                                 </ul>
                             </li>
                         </ul>
+<<<<<<< HEAD
                         <div>
                             <a id="home" class="btn btn-success font-family-primary" href="?controller=Admin&action=create">Create</a>
                         </div>
+=======
+>>>>>>> develop
                     </div>
                     
                 </div>
@@ -143,6 +152,10 @@
         crossorigin="anonymous"></script>
 </body>
 
+<<<<<<< HEAD
 </html>
 Footer
 © 2022 GitHub, Inc.
+=======
+</html>
+>>>>>>> develop
