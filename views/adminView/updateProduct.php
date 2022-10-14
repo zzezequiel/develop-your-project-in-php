@@ -45,9 +45,7 @@
                             <li class="nav-item">
                                 <a class="nav-link" href="#">Buy Land</a>
                             </li>
-                            <li class="nav-item">
-                                <a class="nav-link disabled no-access">Admin Panel</a>
-                            </li>
+
                             <li class="nav-item dropdown">
                                 <a class="nav-link dropdown-toggle" href="#" data-bs-toggle="dropdown"
                                     aria-expanded="false">Account</a>
@@ -135,8 +133,9 @@
                         <div class="col ms-5">
                             <div class="form-group">
                                 
-                                <img src=" <?php echo $this->data['img']?>">
-                                <input type="file" class="mt-4"  id="img" name="img" aria-describedby="img" aria-describedby="img" placeholder="Enter img">
+                                <img width="720" height="405" src=" <?php echo $this->data['img']?>">
+                                <label for="imgsrc">Image source path</label>
+                                <input type="text"  value="<?php echo $this->data['img']?>"id="img" name="img" class="form-control" aria-describedby="img" aria-describedby="img" placeholder="Enter img">
                             </div>
                         </div>
                     </div>

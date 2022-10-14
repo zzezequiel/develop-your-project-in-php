@@ -57,6 +57,9 @@
             $size =  $product["size"];
             $price = $product["price"];
             $img = $product["img"];
+            
+           
+     
 
             $query = $this->db->connect()->prepare(" UPDATE products
             SET title = '$title', description = '$description', location = '$location', pre_build = '$pre_build', size = '$size', price = '$price', img = '$img'
