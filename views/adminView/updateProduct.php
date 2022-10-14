@@ -136,7 +136,7 @@
                             <div class="form-group">
                                 
                                 <img src=" <?php echo $this->data['img']?>">
-                                <input type="file" class="mt-4"  id="img" name="img" aria-describedby="img" aria-describedby="img" placeholder="Enter img">
+                                <input type="text" class="mt-4" value="<?php echo $this->data['img']?>" id="img" name="img" aria-describedby="img" aria-describedby="img" placeholder="Enter img">
                             </div>
                         </div>
                     </div>
