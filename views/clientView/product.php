@@ -19,7 +19,7 @@
     <!-- CSS -->
     <link rel="stylesheet" href="assets/styles.css" />
 
-    <title>Anurati</title>
+    <title>Anunnaki</title>
 </head>
 
 <body>
@@ -119,8 +119,8 @@
                         </div>
                             <div class="d-flex justify-content-between mt-4">
                                 <a id="return" class="btn btn-secondary btn-lg" href="<?php echo "?controller=Client&action=getAllProducts"; ?>">Return</a>
-                                        <button type='button' class='btn btn-success btn-lg'>Buy</button>
-                                        <button type='button' class='btn btn-secondary btn-lg '>Reoffer</button>
+                                        <a type='button' class='btn btn-success btn-lg'>Buy</a>
+                                        <a type='button' class='btn btn-secondary btn-lg '>Reoffer</a>
                             </div>
                         </div>
                         
