@@ -133,10 +133,9 @@
                         <div class="col ms-5">
                             <div class="form-group">
                                 
-                               
-                                
                                 <img width="720" height="405" src=" <?php echo $this->data['img']?>">
-                                <input type="text" class="mt-4"  value="<?php echo $this->data['img']?>"id="img" name="img" aria-describedby="img" aria-describedby="img" placeholder="Enter img">
+                                <label for="imgsrc">Image source path</label>
+                                <input type="text"  value="<?php echo $this->data['img']?>"id="img" name="img" class="form-control" aria-describedby="img" aria-describedby="img" placeholder="Enter img">
                             </div>
                         </div>
                     </div>
