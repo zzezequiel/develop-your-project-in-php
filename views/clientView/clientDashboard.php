@@ -82,16 +82,16 @@
             <!-- START THE FEATURETTES -->
 
             
-          
-                             <?php
-                             
-                             foreach ($this -> data as $index => $products) {
+        
+                            <?php
+                            
+                            foreach ($this -> data as $index => $products) {
                                 
                         echo "  <hr class='featurette-divider'>
                                 <div class='row featurette m-5'>
                                     <div class='col-md-7'>
                                         <h2 class='featurette-heading fw-normal lh-1'>".$products['title']. " <span class='text-muted'> ". $products['size']. " sq. metres</span></h2>
-                                         <h5 class='featurette-heading fw-normal lh-1'>Property of: <b>".$products['name']." ".$products['lastName']."</b></h5> 
+                                        <h5 class='featurette-heading fw-normal lh-1'>Property of: <b>".$products['name']." ".$products['lastName']."</b></h5> 
                                         <p class='lead'>".$products['description']."</p>
                                         <p class='lead'>Price ".$products['price']." $</p>
                                         
@@ -151,6 +151,9 @@
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js"
         integrity="sha384-OERcA2EqjJCMA+/3y+gxIOqMEjwtxJY7qPCqsdltbNJuaOe923+mo//f6V8Qbsw3"
         crossorigin="anonymous"></script>
+
+        <!--  -->
+        <script src="//cdn.jsdelivr.net/npm/sweetalert2@11"></script>
 </body>
 
 </html>
