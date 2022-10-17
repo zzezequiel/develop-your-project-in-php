@@ -29,7 +29,7 @@
                     </ul>
                 </div>
                 <div>
-                            <a id="home" class="btn btn-success font-family-primary" href="?controller=Admin&action=create">Create</a>
+                            <a id="home" style="width:200px"class="btn btn-success font-family-primary d-flex justify-content-center align-items-center" href="?controller=Admin&action=create">Create</a>
                         </div>
             </div>
         </nav>
