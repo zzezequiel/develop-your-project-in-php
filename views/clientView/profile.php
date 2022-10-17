@@ -23,6 +23,7 @@
 
 <main>
         <div class="container-xl mt-5">
+        <h1 class="col card-text text-center  mt-5"><b>Your Profile</b></h1>
 
             <div class="col" style="width:100%;">
                 <br><br>
@@ -46,12 +47,13 @@
                 </div>
                 
                                 
-                <h4 class="col card-text  mt-2"><b>Owned Lands</b></h4>
+                <h2 class="col card-text text-center  mt-5"><b>Owned Lands</b></h2>
                 <div class="row">
 
                 <?php
                     foreach ($this -> data as $index => $userdata) {
                         echo "
+                        <a class='mb-1 mx-3 my-3' style='width:25rem; text-decoration:none;' href='?controller=Client&action=getProduct&id=" . $userdata['id'] ."'>
                             <div class='shadow-lg p-3 mb-5 bg-body rounded bg-white bg-transparent card text-white mb-1 mx-3 my-3' style='width:25rem'>
                                 <img width='350px' height='100%' class='mt-4 mb-4 mx-auto d-block' src=" . $userdata['img'] . ">
                                 <h4 class='text-center text-uppercase font-family-primary'>".$userdata['title']."</h4>
@@ -60,15 +62,15 @@
                                 <p class='text-center'>Price:<b> ".$userdata['price'] ." $</b></p>
 
                             </div>
-
+                        </a>
                         ";
                                 
                     } 
                 ?> 
     </div>
  
-                <div class="d-flex justify-content-between mt-5 ">
-                    <a style="width: 30%" id="return" class="btn btn-secondary btn-lg my-5 d-flex align-items-center justify-content-center" href="<?php echo "?controller=Client&action=getAllProducts"; ?>">Return</a>
+                <div class="ms-4 mt-5 ">
+                    <a style="width: 15%" id="return" class="btn btn-secondary btn-lg my-5 d-flex align-items-center justify-content-center" href="<?php echo "?controller=Client&action=getAllProducts"; ?>">Return</a>
                 </div>
             </div>
         </div>
