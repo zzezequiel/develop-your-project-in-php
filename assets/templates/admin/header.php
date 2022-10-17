@@ -30,6 +30,7 @@
                 </div>
                 <div>
                             <a id="home" style="width:200px"class="btn btn-success font-family-primary d-flex justify-content-center align-items-center" href="?controller=Admin&action=create">Create</a>
+                            <br>
                             <p> User: <?php echo $_SESSION['userSession']?> </p>
                         </div>
             </div>
