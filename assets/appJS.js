@@ -7,7 +7,7 @@ const
 // FUNCIONES
 
     // Cambiar la foto cada x segundos
-setInterval(function () {
-    btnNext.click();
-    console.log("Continue Clicked");
-}, 10000); 
+// setInterval(function () {
+//     btnNext.click();
+//     console.log("Continue Clicked");
+// }, 10000); 
