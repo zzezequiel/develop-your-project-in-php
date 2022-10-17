@@ -79,14 +79,6 @@
 
         function create($products)
         {
-
-            /* echo 
-            $products["title"].",".$products["description"].",".$products["location"].",".$products["pre_build"].",".$products["size"].",".$products["price"].",".$products["img"]; */
-
-
-            echo "<br>";
-            print_r ($products);
-            echo "<br>";
             $query = $this->db->connect()->prepare("INSERT INTO products (id_user, title, description, location, pre_build, size, price, img)
             VALUES
             (?, ?, ?, ?, ?, ?, ?, ?);");
@@ -108,6 +100,5 @@
                 return [false, $e];
             }
         }
-
     }
     

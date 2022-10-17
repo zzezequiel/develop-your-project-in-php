@@ -29,8 +29,8 @@
                     </ul>
                 </div>
                 <div>
-                    <a id="home" class="btn btn-success btn-lg" href="?controller=Admin&action=create">Create</a>
-                    </div>
+                            <a id="home" class="btn btn-success font-family-primary" href="?controller=Admin&action=create">Create</a>
+                        </div>
             </div>
         </nav>
     </header>
