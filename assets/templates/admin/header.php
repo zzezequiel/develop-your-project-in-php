@@ -29,10 +29,9 @@
                     </ul>
                 </div>
                 <div>
-                <a id="home" class="btn btn-success btn-lg d-flex align-items-center justify-content-center my-3" href="?controller=Admin&action=create">Create</a>
-
-                    <p> User: <?php echo $_SESSION['userSession']?> </p>
-                    </div>
+                            <a id="home" style="width:200px"class="btn btn-success font-family-primary d-flex justify-content-center align-items-center" href="?controller=Admin&action=create">Create</a>
+                            <p> User: <?php echo $_SESSION['userSession']?> </p>
+                        </div>
             </div>
         </nav>
     </header>
