@@ -42,4 +42,28 @@
         $this->view->render("clientView/product");
 
         }
+
+        function getUserdata($request){
+            $userdata = null;
+
+        if (isset($_SESSION['user'])) {
+            $request =  $_SESSION['user'];
+            
+            $userdata = $this->model->getUserById($request);
+     
+                    
+            }
+            else {
+                header("Location: index.php?controller=Login&action=logOut");
+
+            }
+        
+        
+        $this->view->action = $request["action"];
+        $this->view->data = $userdata;
+        $this->view->render("clientView/profile");
+
+    }
+
+    
     }

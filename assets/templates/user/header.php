@@ -21,8 +21,8 @@
                             <a class="nav-link dropdown-toggle" href="#" data-bs-toggle="dropdown"
                                 aria-expanded="false">Account</a>
                             <ul class="dropdown-menu">
-                                <li><a class="dropdown-item scroll-nav" href="#">Profile</a></li>
-                                <li><a class="dropdown-item scroll-nav" href="#">Setting</a></li>
+                                <li><a class="dropdown-item scroll-nav" href="?controller=Client&action=getUserdata&id=<?php echo $_SESSION['user']; ?>">Profile</a></li>
+                                <li><a class="dropdown-item scroll-nav" href="#">Setting</a></li> 
                                 <li><a class="dropdown-item scroll-nav" href="?controller=Login&action=logOut">Log out</a></li>
                             </ul>
                         </li>

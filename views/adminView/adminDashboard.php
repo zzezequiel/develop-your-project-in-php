@@ -44,10 +44,12 @@
                     </div>
                 </div>
                 <div class="row">
+
                 <?php
                 
                 
                     foreach ($this -> data as $index => $products) {
+
                         echo "
                             <div class='shadow-lg p-3 mb-5 bg-body rounded bg-white bg-transparent card text-white mb-1 mx-3 my-3' style='width:25rem'>
                                 <img width='350px' height='100%' class='mt-4 mb-4 mx-auto d-block' src=" . $products['img'] . ">
@@ -80,6 +82,7 @@
 
                                 
                     } 
+                    print_r($this -> data);
                 ?> 
                         </div>
             </div>

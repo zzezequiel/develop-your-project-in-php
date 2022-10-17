@@ -7,6 +7,7 @@ class LoginController
     // VALIDATE
     public $email;
     public $password;
+    public $id_user;
    
     function logOut()
     {   //session_start();
@@ -22,10 +23,12 @@ class LoginController
         
     $this -> email = $_POST["email"];
     $this -> password = $_POST["password"];
+    
         
        $loginModel =  new LoginModel;
         
         $userLogin= $loginModel ->validate($this->email,$this->password);
+        $userdata= $loginModel ->getAll($this->id_user);
       
         if($userLogin) {
             if($userLogin['roll']==="admin"){
@@ -39,6 +42,7 @@ class LoginController
                 //client dashboard
                  session_start();
                  $_SESSION['userSession'] = $this->email;
+                 $_SESSION['user'] = $userLogin['id_user'];
                 $_SESSION['clientSession'] = $this->email;
             
              header("Location: index.php?controller=Client&action=getAllProducts");
