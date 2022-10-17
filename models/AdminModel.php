@@ -91,7 +91,7 @@
             $query->bindParam(6, $products["size"]);
             $query->bindParam(7, $products["price"]);
             $query->bindParam(8, $products["img"]);
-            
+
 
             try {
                 $query->execute();
