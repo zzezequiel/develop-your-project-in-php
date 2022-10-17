@@ -12,7 +12,7 @@
                 <div class="collapse navbar-collapse" id="navbarCollapse">
                     <ul class="navbar-nav me-auto mb-2 mb-md-0">
                         <li class="nav-item">
-                            <a class="nav-link active1" aria-current="page" href="#">Home</a>
+                            <a class="nav-link active1" aria-current="page" href="?controller=Client&action=getAllProducts">Home</a>
                         </li>
                         <li class="nav-item">
                             <a class="nav-link" href="#">Buy Land</a>
@@ -21,7 +21,7 @@
                             <a class="nav-link dropdown-toggle" href="#" data-bs-toggle="dropdown"
                                 aria-expanded="false">Account</a>
                             <ul class="dropdown-menu">
-                                <li><a class="dropdown-item scroll-nav" href="?controller=Client&action=getUserdata&id=<?php echo $_SESSION['user']; ?>">Profile</a></li>
+                                <li><a class="dropdown-item scroll-nav" href="?controller=Client&action=getUserdata&id=<?php  $_SESSION['user']; ?>">Profile</a></li>
                                 <li><a class="dropdown-item scroll-nav" href="#">Setting</a></li> 
                                 <li><a class="dropdown-item scroll-nav" href="?controller=Login&action=logOut">Log out</a></li>
                             </ul>
