@@ -91,8 +91,8 @@
                                 </div>
                             </div>
                             <div class="d-flex justify-content-between mt-4">
-                                <a id="return" class="btn btn-secondary" href="<?php echo "?controller=Admin&action=getAllProducts"; ?>">Return</a>
-                                <button type="submit" class="btn btn-primary">Submit</button>
+                                <a id="return" style="width:200px" class="btn btn-secondary d-flex justify-content-center align-items-center" href="<?php echo "?controller=Admin&action=getAllProducts"; ?>">Return</a>
+                                <button type="submit" style="width:200px" class="btn btn-primary d-flex justify-content-center align-items-center">Submit</button>
                             </div>
                         </div>
                     </div>

@@ -57,8 +57,8 @@
             $price = $product["price"];
             $img = $product["img"];
             
-           
-     
+        
+    
 
             $query = $this->db->connect()->prepare(" UPDATE products
             SET title = '$title', description = '$description', location = '$location', pre_build = '$pre_build', size = '$size', price = '$price', img = '$img'
@@ -78,14 +78,6 @@
 
         function create($products)
         {
-
-            /* echo 
-            $products["title"].",".$products["description"].",".$products["location"].",".$products["pre_build"].",".$products["size"].",".$products["price"].",".$products["img"]; */
-
-
-            echo "<br>";
-            print_r ($products);
-            echo "<br>";
             $query = $this->db->connect()->prepare("INSERT INTO products (id_user, title, description, location, pre_build, size, price, img)
             VALUES
             (?, ?, ?, ?, ?, ?, ?, ?);");
@@ -100,6 +92,7 @@
             $query->bindParam(7, $products["price"]);
             $query->bindParam(8, $products["img"]);
 
+
             try {
                 $query->execute();
                 return [true];
@@ -107,6 +100,5 @@
                 return [false, $e];
             }
         }
-
     }
     

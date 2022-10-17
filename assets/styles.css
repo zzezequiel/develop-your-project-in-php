@@ -38,19 +38,20 @@ body {
 }
 
 .img-1{
-    background-image: url('img/imagen8.webp');
+    background-image: url('img/imagen8.webp')!important;
     background-size: cover;
     background-position: center;
+   
 }
 
 .img-2{
-    background-image: url('img/imagen3.png');
+    background-image: url('img/imagen3.png')!important;
     background-size: cover;
     background-position: center;
 }
 
 .img-3{
-    background-image: url('img/imagen10.jpeg');
+    background-image: url('img/imagen10.jpeg')!important;
     background-size: cover;
     background-position: center;
 }

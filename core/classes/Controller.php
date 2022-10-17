@@ -3,7 +3,7 @@
 trait Controller
 {
     public $view;
-     public $model;
+    public $model;
 
     function __construct()
     {
@@ -30,7 +30,7 @@ trait Controller
         }
     }
 
-     function loadModel($model)
+    function loadModel($model)
     {
         $url = MODELS . '/' . $model . 'Model.php';
 
@@ -45,6 +45,6 @@ trait Controller
 
     function error($errorMsg)
     {
-       require_once VIEWS . "/error/error.php";
-     }
+        require_once VIEWS . "/error/error.php";
+    }
 }

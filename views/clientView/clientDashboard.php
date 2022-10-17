@@ -38,27 +38,15 @@
 
         <div class="carousel-inner">
             <div>       
-                <img class="carousel-item active" src="assets/img/imagen12.jpeg" style="height:100vh; width:100%" alt="...">
-                <div class="carousel-caption">                   
-                    <h2 class="font-family-primary">The Future of the Metaverse</h2>
-
-                </div>
+                <img class="carousel-item active" src="assets/img/imagen12.jpeg" alt="...">
             </div>
 
             <div>       
                 <img class="carousel-item active" src="assets/img/imagen3.png" alt="...">
-                <div class="carousel-caption">
-                    <h2 class="font-family-primary">Live the Experience</h2>
-
-                </div>
             </div>
 
             <div>       
                 <img class="carousel-item active" src="assets/img/imagen15.jpg" alt="...">
-                <div class="carousel-caption">   
-                    <h2 class="font-family-primary">Join in</h2>
-
-                </div>
             </div>
         </div>
 
@@ -80,16 +68,16 @@
     <h1 class="font-family-primary text-center my-5">ANUNNAKI</h1>
             
                             <div class="container mx-auto">
-                             <?php
-                             
-                             foreach ($this -> data as $index => $products) {
+                            <?php
+                            
+                            foreach ($this -> data as $index => $products) {
                                 
                         echo "  <hr class='featurette-divider'>
                                 
                                 <div class='row my-5'>
                                     <div class='col-md-7'>
                                         <h2 class='featurette-heading fw-normal lh-1'>".$products['title']. " <span class='text-muted'> ". $products['size']. " sq. metres</span></h2>
-                                         <h5 class='featurette-heading fw-normal lh-1'>Property of: <b>".$products['name']." ".$products['lastName']."</b></h5> 
+                                        <h5 class='featurette-heading fw-normal lh-1'>Property of: <b>".$products['name']." ".$products['lastName']."</b></h5> 
                                         <p class='lead'>".$products['description']."</p>
                                         <p class='lead'>Price ".$products['price']." $</p>
                                         
@@ -143,6 +131,9 @@
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js"
         integrity="sha384-OERcA2EqjJCMA+/3y+gxIOqMEjwtxJY7qPCqsdltbNJuaOe923+mo//f6V8Qbsw3"
         crossorigin="anonymous"></script>
+
+        <!--  -->
+        <script src="//cdn.jsdelivr.net/npm/sweetalert2@11"></script>
 </body>
 
 </html>
