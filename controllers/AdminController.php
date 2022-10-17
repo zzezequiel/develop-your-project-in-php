@@ -64,4 +64,15 @@
             $this->view->render("adminView/addProduct");
         }
     }
+
+    function deleteProduct($request)
+    {
+        $action = $request["action"];
+        $products = null;
+        if (isset($request["id"])) {
+            $products = $this->model->delete($request["id"]);
+            header("Location: index.php?controller=Admin&action=getAllProducts");
+        }
     }
+
+}
