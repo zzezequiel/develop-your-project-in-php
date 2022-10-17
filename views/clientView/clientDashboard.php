@@ -38,27 +38,15 @@
 
         <div class="carousel-inner">
             <div>       
-                <img class="carousel-item active" src="assets/img/imagen12.jpeg" style="height:100vh; width:100%" alt="...">
-                <div class="carousel-caption">                   
-                    <h2 class="font-family-primary">The Future of the Metaverse</h2>
-
-                </div>
+                <img class="carousel-item active" src="assets/img/imagen12.jpeg" alt="...">
             </div>
 
             <div>       
                 <img class="carousel-item active" src="assets/img/imagen3.png" alt="...">
-                <div class="carousel-caption">
-                    <h2 class="font-family-primary">Live the Experience</h2>
-
-                </div>
             </div>
 
             <div>       
                 <img class="carousel-item active" src="assets/img/imagen15.jpg" alt="...">
-                <div class="carousel-caption">   
-                    <h2 class="font-family-primary">Join in</h2>
-
-                </div>
             </div>
         </div>
 
