@@ -53,7 +53,7 @@
                         echo "
                             <div class='shadow-lg p-3 mb-5 bg-body rounded bg-white bg-transparent card text-white mb-1 mx-3 my-3' style='width:25rem'>
                                 <img width='350px' height='100%' class='mt-4 mb-4 mx-auto d-block' src=" . $products['img'] . ">
-                                <h4 class='text-center text-uppercase font-family-primary'>".$products['title']."</h4>
+                                <h4 class='text-center font-family-primary'>".$products['title']."</h4>
                                 <p class='text-center'>Property of: <b>".$products['name']." ".$products['lastName']."</b></p>
                                 <hr class='featurette-divider mt-1'>
                                 <p class='text-center'>Price: <b> ".$products['size'] . " sq. metres</b></p>

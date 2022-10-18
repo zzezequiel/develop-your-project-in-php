@@ -19,7 +19,7 @@ function loadLoginForm() {
 
 // Cambiar la foto cada x segundos
 setInterval(function () {
-    btnNext.click();
+     btnNext.click(); 
     console.log("Continue Clicked");
 }, 5000); 
 

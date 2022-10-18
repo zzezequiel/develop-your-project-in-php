@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Servidor: 127.0.0.1
--- Tiempo de generación: 18-10-2022 a las 12:45:02
+-- Tiempo de generación: 18-10-2022 a las 15:16:08
 -- Versión del servidor: 10.4.24-MariaDB
 -- Versión de PHP: 8.1.6
 
@@ -44,14 +44,14 @@ CREATE TABLE `products` (
 --
 
 INSERT INTO `products` (`id`, `id_user`, `title`, `description`, `location`, `pre_build`, `size`, `price`, `img`) VALUES
-(1, 1, 'Space Art', 'Space art galery where you can buy and sell all your NFT. Join now!', 'Andromeda ', '1', 280, 5000, 'assetsimga90032f1-1c4a-4860-80d0-ab2feb689b92.jpg'),
+(1, 2, 'Space Art', 'Space art galery where you can buy and sell all your NFT. Join now!', 'Andromeda ', '1', 280, 5000, 'assetsimga90032f1-1c4a-4860-80d0-ab2feb689b92.jpg'),
 (2, 2, 'HELIX Founder Pass', 'The Founder Pass  is the best way to take full advantage of one of the most immersive Metaverse experiences on the Blockchain. The Founder Pass is 5000 NFTs that grant 3 months early access to play HELIX. Founder Pass holders will be entitled to exclusive', 'Helluland', 'Constucted', 302, 9000, 'assets\\img\\ciudad-virtual-gettyimages-1135935658.webp'),
-(3, 1, 'Sandbox\'s LANDs', 'The Sandbox is a community-driven platform where creators can monetize voxel assets and gaming experiences on the blockchain. The Sandbox metaverse comprises a map made up of 166,464 LANDS. LAND owners can host contests and events, stake SAND to earn and ', 'Markland', 'Constructed', 75, 1200, 'assets\\img\\Metaverse-Featured.jpg'),
+(3, 5, 'Sandbox\'s LANDs', 'The Sandbox is a community-driven platform where creators can monetize voxel assets and gaming experiences on the blockchain. The Sandbox metaverse comprises a map made up of 166,464 LANDS. LAND owners can host contests and events, stake SAND to earn and ', 'Markland', 'Constructed', 75, 1200, 'assets\\img\\Metaverse-Featured.jpg'),
 (4, 1, 'Villegion', 'A partnership between Probably Nothing and Warner Records, a new type of record label aimed at redefining IP ownership in the music industry, utilizing Web3 technology. This is the first time that a traditional major label joins forces with a leading NFT ', 'Nalesh', 'Constructed', 125, 2500, 'assets\\img\\5d6312a5-204b-4abd-b603-8260dfdfb7d2.jpg'),
 (5, 5, 'MutantApeYachtClub', 'The MUTANT APE YACHT CLUB is a collection of up to 20,000 Mutant Apes that can only be created by exposing an existing Bored Ape to a vial of MUTANT SERUM or by minting a Mutant Ape in the public sale. ', 'Titan', 'Structure', 300, 7500, 'assets\\img\\ciudad-metaverso.jpeg'),
 (6, 3, 'YuGiYn', 'Set inside the skyscraper called “¥u-Gi-¥n” located in city of Shibuya in the near future, ¥u-Gi-¥n is a virtual world building project that provides entertainment such as games, manga, anime, fashion and music. There are 4 districts in the virtual world ', 'Orion', 'Constucted', 870, 21000, 'assets\\img\\vista-azotea-metaverso-city-3d-render_84831-468.webp'),
 (7, 4, 'Otherdeed', 'Otherdeed is the key to claiming land in Otherside. Each have a unique blend of environment and sediment — some with resources, some home to powerful artifacts. And on a very few, a Koda roams.', 'Vinland', 'Constucted', 100, 4500, 'assets\\img\\AdobeStock_488878875-scaled.jpeg'),
-(8, 1, 'Impostors Genesis Aliens', 'The Impostors Genesis Aliens represent the foundational NFT collection of the Impostors ecosystem, and serve as passes the Impostors Genesis Season which will play host to seven unique events. Only 10,420 of these intergalactic creatures will ever exist! ', 'Helluland', 'Structure', 230, 1000, 'assets\\img\\iStock-1382275104-e1658241751265.jpg'),
+(8, 4, 'Impostors Genesis Aliens', 'The Impostors Genesis Aliens represent the foundational NFT collection of the Impostors ecosystem, and serve as passes the Impostors Genesis Season which will play host to seven unique events. Only 10,420 of these intergalactic creatures will ever exist! ', 'Helluland', 'Structure', 230, 1000, 'assets\\img\\iStock-1382275104-e1658241751265.jpg'),
 (9, 3, 'Cyber Factory 2', 'Cyber is a metaverse like no other. In under 5 clicks, anyone can create a digital experience with their NFTs. \r\n\r\nHolding an item from this collection allows you to use it as a 3D exhibition space for your digital assets oncyber.io/create', 'Jirayder', 'Structure', 210, 2400, 'assets\\img\\44.webp'),
 (10, 3, 'Potatoz', 'The Potatoz is a collection of 9,999 utility-enabled PFPs. Each Potatoz is your entry ticket into the great Memeland ecosystem. They make for a great side dish, but some may feel a calling to become the main course. Rumour has it they are secretly related', 'Faroang', 'Constucted', 80, 300, 'assets\\img\\33.jpg');
 
