@@ -61,7 +61,7 @@ class LoginController
         $guest = "Guest";
 
             session_start();
-            $_SESSION['userSession'] = $guest;
+            $_SESSION['guestSession'] = $guest;
             $_SESSION['clientSession'] = $guest;
             $_SESSION['avatar'] = "assets\img\guest.png";
             header("Location: index.php?controller=Client&action=getAllProducts");

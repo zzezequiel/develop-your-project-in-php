@@ -23,9 +23,13 @@
 
 <body>
     <!-- HEADER -->
-    
-    <?php require_once('assets\templates\user\header.php')?>
-
+    <?php
+        if(isset($_SESSION['userSession'])){
+             require_once('assets\templates\user\header.php');
+        }else{
+            require_once('assets\templates\user\headerGuest.php');
+        }
+    ?>
     <!-- HEADER -->
 
     <!-- MAIN -->
