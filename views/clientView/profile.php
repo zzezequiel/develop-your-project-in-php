@@ -25,7 +25,7 @@
         <div class="container-xl mt-5">
         <h1 class="col card-text text-center  mt-5"><b>Your Profile</b></h1>
             <div class="d-flex justify-content-center">
-                <img style="max-width: 150px;" class=" img-raised rounded-circle img-fluid" src="<?php echo $this->data[0]['avatar']?>">
+               <img style="max-width: 150px;" class=" img-raised rounded-circle img-fluid" src="<?php echo $this->data[0]['avatar']?>"> 
             </div>
             <div class="col" style="width:100%;">
                 <br><br>

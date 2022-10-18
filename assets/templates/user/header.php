@@ -28,7 +28,9 @@
                         </li>
                     </ul>
                 </div>
-                    <p> User: <?php echo $_SESSION['userSession']?> </p>
+                    <p class="mt-3"> User: <?php echo $_SESSION['userSession']?> </p>
+               <img style="max-width: 50px;" class="ms-5 img-raised rounded-circle img-fluid" src="<?php echo $_SESSION['avatar']?>"> 
+
             </div>
         </nav>
     </header>
