@@ -38,11 +38,18 @@
         <section class="marketing my-5">
             <!-- START THE FEATURETTES -->
             <div class="container">
-                <div class='row m-5'>
-                    <div class="col">
+                
+                    <div class="row mt-5" >
                         <button>Add Land</button>
                     </div>
-                </div>
+                    <div class="row mb-5" >
+                        <button>Add Land</button>
+                    </div>
+                    <div class="row my-5 text-center" >
+                        <h1 class="font-family-primary">Welcome Admin</h1>
+                        <h3>Here you can update or delete yours Land's data. Enjoy the journey to the metaverse</h3>
+                    </div>
+                
                 <div class="row">
 
                 <?php
