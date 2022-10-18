@@ -3,7 +3,7 @@
 class LoginModel extends Model
 {
     
-    function getAll()
+   /* function getAll()
     {
         $query = $this->db->connect()->prepare("SELECT u.user_id
          FROM users u 
@@ -12,16 +12,18 @@ class LoginModel extends Model
 
         try {
             $query->execute();
-            $users = $query->fetchAll();
+            $users = $query->fetch();
             return $users;
         } catch (PDOException $e) {
             return [];
         }
-    }
+    }*/
     
     function validate($emailPost, $passwordPost)
     {
-        $query = $this->db->connect()->prepare("SELECT * FROM users e
+        $query = $this->db->connect()->prepare("SELECT u.user_id, u.email, u.password,u.roll , ud.avatar
+         FROM users u
+         INNER JOIN userdata ud ON ud.idd = u.user_id
          WHERE email ='$emailPost' AND password='$passwordPost';");
 
         try {
@@ -29,10 +31,6 @@ class LoginModel extends Model
             $user=$query->fetch();
             
                 return $user;
-        
-           //  return $user;  //array
-            
-          
             
         } catch (PDOException $e) {
             return [];
