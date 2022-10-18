@@ -21,7 +21,6 @@
                             <a class="nav-link dropdown-toggle" href="#" data-bs-toggle="dropdown"
                                 aria-expanded="false">Account</a>
                             <ul class="dropdown-menu">
-                                <li><a class="dropdown-item scroll-nav" href="#">Profile</a></li>
                                 <li><a class="dropdown-item scroll-nav" href="#">Setting</a></li>
                                 <li><a class="dropdown-item scroll-nav" href="?controller=Login&action=logOut">Log out</a></li>
                             </ul>
@@ -29,7 +28,7 @@
                     </ul>
                 </div>
                 <div>
-                            <a id="home" style="width:200px"class="btn btn-success font-family-primary d-flex justify-content-center align-items-center" href="?controller=Admin&action=create">Create</a>
+                            <a id="home" style="width:200px"class="btn btn-success font-family-primary d-flex justify-content-center align-items-center mt-3" href="?controller=Admin&action=create">Create</a>
                             <br>
                             <p> User: <?php echo $_SESSION['userSession']?> </p>
                         </div>

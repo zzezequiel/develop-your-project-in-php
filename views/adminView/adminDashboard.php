@@ -82,7 +82,6 @@
 
                                 
                     } 
-                    print_r($this -> data);
                 ?> 
                         </div>
             </div>
