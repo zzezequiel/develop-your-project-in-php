@@ -36,11 +36,11 @@ function get(){
 }
 
 function getUserById($request){
-    $query = $this->db->connect()->prepare("SELECT u.email, u.id_user, ud.first_name , ud.last_name, ud.age, ud.phone, ud.city, p.title as 'title', p.location as 'location', p.description as 'description', p.pre_build, p.size, p.price, p.img as 'img', p.id
+    $query = $this->db->connect()->prepare("SELECT u.email, u.user_id, ud.first_name , ud.last_name, ud.age, ud.phone, ud.city, p.title as 'title', p.location as 'location', p.description as 'description', p.pre_build, p.size, p.price, p.img as 'img', p.id
      FROM users u
-    INNER JOIN userdata ud ON u.id_user = ud.idd
+    INNER JOIN userdata ud ON u.user_id = ud.idd
     INNER JOIN products p ON ud.idd = p.id_user
-    WHERE u.id_user = $request;");
+    WHERE u.user_id= $request;");
 
     
         try {

@@ -5,15 +5,15 @@ class LoginModel extends Model
     
     function getAll()
     {
-        $query = $this->db->connect()->prepare("SELECT u.id_user
+        $query = $this->db->connect()->prepare("SELECT u.user_id
          FROM users u 
         
         ;");
 
         try {
             $query->execute();
-            $employees = $query->fetchAll();
-            return $employees;
+            $users = $query->fetchAll();
+            return $users;
         } catch (PDOException $e) {
             return [];
         }

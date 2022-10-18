@@ -42,7 +42,7 @@ class LoginController
                 //client dashboard
                  session_start();
                  $_SESSION['userSession'] = $this->email;
-                 $_SESSION['user'] = $userLogin['id_user'];
+                 $_SESSION['user'] = $userLogin['user_id'];
                 $_SESSION['clientSession'] = $this->email;
             
              header("Location: index.php?controller=Client&action=getAllProducts");
