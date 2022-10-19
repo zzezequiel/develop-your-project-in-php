@@ -21,7 +21,6 @@
                             <a class="nav-link dropdown-toggle" href="#" data-bs-toggle="dropdown"
                                 aria-expanded="false">Account</a>
                             <ul class="dropdown-menu">
-                                <li><a class="dropdown-item scroll-nav" href="?controller=Client&action=logOut">Profile</a></li>
                                 <li><a class="dropdown-item scroll-nav" href="#">Setting</a></li> 
                                 <li><a class="dropdown-item scroll-nav" href="?controller=Login&action=logOut">Log out</a></li>
                             </ul>
