@@ -93,11 +93,25 @@
                 </section>
 
                 <!-- LOGIN FORM -->
+
+
+                
                 <section class="px-lg-5 py-lg-4 p-4 w-100 align-self-center">
                     <div id="loginSection" class="">
                         <h2 class="font-weight-bold mb-4 font-family-primary">
                             Sign into ANUNNAKI
                         </h2>
+                 
+                 <?php 
+                 if(isset($_GET['validate'])){
+                    if($_GET['validate']=='error'){
+                
+                         echo "<div class='alert alert-danger alert-dismissible fade show'>
+                        <strong>Error!</strong> Incorrect credentials.
+                        <button type='button' class='btn-close' data-bs-dismiss='alert'></button>
+                        </div>";
+                    }
+                }?>
 
                         <form action="?controller=Login&action=validate" method="post" id="formLogin" class="mb-5">
                             <div class="mb-4">
