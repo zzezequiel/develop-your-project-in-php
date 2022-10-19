@@ -38,8 +38,10 @@ class LoginController
                 $_SESSION['userSession'] = $this->email;
                 $_SESSION['adminSession'] = $this->email;
             
-                header("Location: index.php?controller=Admin&action=getAllProducts");  ///call class views instead
-            }else {
+                header("Location: index.php?controller=Admin&action=getAllProducts"); ///call class views instead
+                
+
+                }else {
                 //client dashboard
                  session_start();
                 $_SESSION['userSession'] = $this->email;
@@ -49,6 +51,7 @@ class LoginController
                 $_SESSION['avatar'] = $userLogin['avatar'];
             
              header("Location: index.php?controller=Client&action=getAllProducts");
+          
             }
             
         }else{
