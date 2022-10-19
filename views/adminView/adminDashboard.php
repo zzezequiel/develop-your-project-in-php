@@ -13,8 +13,7 @@
     <!-- FontAwesome -->
     <script src="https://kit.fontawesome.com/137c893bad.js" crossorigin="anonymous"></script>
 
-    <!-- JS -->
-    <script src="assets/appJS.js" defer></script>
+    
 
     <!-- CSS -->
     <link rel="stylesheet" href="assets/styles.css" />
@@ -74,23 +73,36 @@
                                         </svg>
                                     </a>
 
-                                    <a class='col btn btn-outline-danger ms-2 btn_sm d-flex align-items-center justify-content-center' href='?controller=Admin&action=deleteProduct&id=" . $products['id'] . "'>DELETE&nbsp
-                                        <svg xmlns='http://www.w3.org/2000/svg' width='14' fill='currentColor' class='bi bi-trash-fill' viewBox='0 0 16 16'>
-                                        <path d='M2.5 1a1 1 0 0 0-1 1v1a1 1 0 0 0 1 1H3v9a2 2 0 0 0 2 2h6a2 2 0 0 0 2-2V4h.5a1 1 0 0 0 1-1V2a1 1 0 0 0-1-1H10a1 1 0 0 0-1-1H7a1 1 0 0 0-1 1H2.5zm3 4a.5.5 0 0 1 .5.5v7a.5.5 0 0 1-1 0v-7a.5.5 0 0 1 .5-.5zM8 5a.5.5 0 0 1 .5.5v7a.5.5 0 0 1-1 0v-7A.5.5 0 0 1 8 5zm3 .5v7a.5.5 0 0 1-1 0v-7a.5.5 0 0 1 1 0z'/>
-                                        </svg>
-                                    </a>
+                                    
+                                    <button type='button' class='col btn btn-outline-danger ms-2 btn_sm d-flex align-items-center justify-content-center' data-bs-toggle='modal' data-bs-target='#modalDelete". $products['id'] ."'>DELETE&nbsp
+                                    <svg xmlns='http://www.w3.org/2000/svg' width='14' fill='currentColor' class='bi bi-trash-fill' viewBox='0 0 16 16'>
+                                    <path d='M2.5 1a1 1 0 0 0-1 1v1a1 1 0 0 0 1 1H3v9a2 2 0 0 0 2 2h6a2 2 0 0 0 2-2V4h.5a1 1 0 0 0 1-1V2a1 1 0 0 0-1-1H10a1 1 0 0 0-1-1H7a1 1 0 0 0-1 1H2.5zm3 4a.5.5 0 0 1 .5.5v7a.5.5 0 0 1-1 0v-7a.5.5 0 0 1 .5-.5zM8 5a.5.5 0 0 1 .5.5v7a.5.5 0 0 1-1 0v-7A.5.5 0 0 1 8 5zm3 .5v7a.5.5 0 0 1-1 0v-7a.5.5 0 0 1 1 0z'/>
+                                    </svg></button>
                                 </div>
                             </div>
+                            
+                            <!-- Modal -->
+                <div class='modal fade' id='modalDelete". $products['id']."'tabindex='-1' role='dialog' aria-labelledby='exampleModalLabel' aria-hidden='true'>
+                    <div class='modal-dialog' role='document'>
+                        <div class='modal-content'>
+                            <div class='modal-header d-flex justify-content-center bg-danger'>
+                                <h2 class='modal-title text-white' id='exampleModalLabel'>Delete Product</h2>
+                            </div>
 
-
-
-
-";
-
-                                
+                            <div class='modal-body'>
+                                <p class='text-center text-black'> Are you sure you want to delete the <b>" .$products['title']."</b></p>
+                            </div>
+                            <div class='d-flex justify-content-center my-3 mx-3'>
+                                <a class='col btn btn-sm btn-outline-danger btn_sm d-flex align-items-center justify-content-center' href='?controller=Admin&action=deleteProduct&id=". $products['id']."><svg xmlns='http://www.w3.org/2000/svg' width='14' fill='currentColor' class='bi bi-trash-fill' viewBox='0 0 16 16'><path d='M2.5 1a1 1 0 0 0-1 1v1a1 1 0 0 0 1 1H3v9a2 2 0 0 0 2 2h6a2 2 0 0 0 2-2V4h.5a1 1 0 0 0 1-1V2a1 1 0 0 0-1-1H10a1 1 0 0 0-1-1H7a1 1 0 0 0-1 1H2.5zm3 4a.5.5 0 0 1 .5.5v7a.5.5 0 0 1-1 0v-7a.5.5 0 0 1 .5-.5zM8 5a.5.5 0 0 1 .5.5v7a.5.5 0 0 1-1 0v-7A.5.5 0 0 1 8 5zm3 .5v7a.5.5 0 0 1-1 0v-7a.5.5 0 0 1 1 0z'/></svg>Delete
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>";
+        
                     } 
                 ?> 
-                        </div>
+                
             </div>
         </section><!-- /.container -->
     </main>
@@ -119,10 +131,12 @@
     </footer>
     <!-- FOOTER -->
 
-    <!-- Bootstrap -->
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js"
-        integrity="sha384-OERcA2EqjJCMA+/3y+gxIOqMEjwtxJY7qPCqsdltbNJuaOe923+mo//f6V8Qbsw3"
-        crossorigin="anonymous"></script>
+    <!-- JavaScript Bundle with Popper -->
+    <!-- JavaScript Bundle with Popper -->
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>
+
+    <!-- JS -->
+    <script src="assets/appJS.js"></script>
 </body>
 
 </html>
