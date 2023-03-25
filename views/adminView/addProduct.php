@@ -34,7 +34,7 @@
         }
         ?>
 
-        <form class="mb-5 needs-validation" action="index.php?controller=Admin&action=create" method="POST">
+        <form class="mb-5 needs-validation" action="index.php?controller=Admin&action=create" method="POST" enctype="multipart/form-data">
             <div class="form-row">
                 <div class="col">
                     <div class="form-group">

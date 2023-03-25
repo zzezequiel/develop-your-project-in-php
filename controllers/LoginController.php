@@ -7,7 +7,8 @@ class LoginController
     // VALIDATE
     public $email;
     public $password;
-    public $id_user;
+    public $user_id;
+    public $avatar;
    
     function logOut()
     {   //session_start();
@@ -28,7 +29,7 @@ class LoginController
        $loginModel =  new LoginModel;
         
         $userLogin= $loginModel ->validate($this->email,$this->password);
-        $userdata= $loginModel ->getAll($this->id_user);
+        
       
         if($userLogin) {
             if($userLogin['roll']==="admin"){
@@ -37,15 +38,20 @@ class LoginController
                 $_SESSION['userSession'] = $this->email;
                 $_SESSION['adminSession'] = $this->email;
             
-                header("Location: index.php?controller=Admin&action=getAllProducts");  ///call class views instead
-            }else {
+                header("Location: index.php?controller=Admin&action=getAllProducts"); ///call class views instead
+                
+
+                }else {
                 //client dashboard
                  session_start();
-                 $_SESSION['userSession'] = $this->email;
-                 $_SESSION['user'] = $userLogin['user_id'];
+                $_SESSION['userSession'] = $this->email;
                 $_SESSION['clientSession'] = $this->email;
+
+                $_SESSION['user'] = $userLogin['user_id'];
+                $_SESSION['avatar'] = $userLogin['avatar'];
             
              header("Location: index.php?controller=Client&action=getAllProducts");
+          
             }
             
         }else{
@@ -58,8 +64,9 @@ class LoginController
         $guest = "Guest";
 
             session_start();
-            $_SESSION['userSession'] = $guest;
+            $_SESSION['guestSession'] = $guest;
             $_SESSION['clientSession'] = $guest;
+            $_SESSION['avatar'] = "assets\img\guest.png";
             header("Location: index.php?controller=Client&action=getAllProducts");
 
        }

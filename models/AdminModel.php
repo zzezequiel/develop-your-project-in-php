@@ -78,6 +78,14 @@
 
         function create($products)
         {
+            $target_dir    = "assets/img/";
+            $newPath   = $target_dir . basename($_FILES["img"]["name"]);
+
+            $oldPath = $_FILES['img']['tmp_name'];
+    
+            rename("$oldPath","$newPath");
+
+            $products['img'] = $newPath;
             $query = $this->db->connect()->prepare("INSERT INTO products (id_user, title, description, location, pre_build, size, price, img)
             VALUES
             (?, ?, ?, ?, ?, ?, ?, ?);");

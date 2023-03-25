@@ -12,7 +12,7 @@
                 <div class="collapse navbar-collapse" id="navbarCollapse">
                     <ul class="navbar-nav me-auto mb-2 mb-md-0">
                         <li class="nav-item">
-                            <a class="nav-link active1" aria-current="page" href="index.php?controller=Client&action=getAllproducts">Home</a>
+                            <a class="nav-link active1" aria-current="page" href="?controller=Client&action=getAllProducts">Home</a>
                         </li>
                         <li class="nav-item">
                             <a class="nav-link" href="#">Buy Land</a>
@@ -21,17 +21,15 @@
                             <a class="nav-link dropdown-toggle" href="#" data-bs-toggle="dropdown"
                                 aria-expanded="false">Account</a>
                             <ul class="dropdown-menu">
-                                <li><a class="dropdown-item scroll-nav" href="#">Setting</a></li>
+                                <li><a class="dropdown-item scroll-nav" href="#">Setting</a></li> 
                                 <li><a class="dropdown-item scroll-nav" href="?controller=Login&action=logOut">Log out</a></li>
                             </ul>
                         </li>
                     </ul>
                 </div>
-                <div>
-                            <a id="home" style="width:200px"class="btn btn-success font-family-primary d-flex justify-content-center align-items-center mt-3" href="?controller=Admin&action=create">Create</a>
-                            <br>
-                            <p> User: <?php echo $_SESSION['userSession']?> </p>
-                        </div>
+                    <p class="mt-3"> User: <?php echo $_SESSION['guestSession']?> </p>
+               <img style="max-width: 50px;" class="ms-5 img-raised rounded-circle img-fluid" src="<?php echo $_SESSION['avatar']?>"> 
+
             </div>
         </nav>
     </header>
